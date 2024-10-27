@@ -1,0 +1,72 @@
+/* overlay button */
+.don_icon_animate {
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  font-size: 30px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  animation: don_icon 2s infinite;
+  z-index: 3; /* Ensure the button is above other elements */
+  transition: background-color 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Change the background color for visibility */
+.red_color {
+  color: white;
+  background-color: #D62828; /* Original background color */
+}
+
+.red_color:hover {
+  background-color: #C72C2C; /* Slightly darker on hover for effect */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 968px) {
+  .don_icon_animate {
+    font-size: 15px;
+  }
+}
+
+@keyframes don_icon {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+    background-color: #d62828bb
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* palette colors */
+.blue_color {
+  color: white;
+  background-color: #003049;
+}
+
+.orange_color {
+  color: black;
+  background-color: #F77F00;
+}
+
+.orange2_color {
+  color: black;
+  background-color: #FCBF49;
+}
+
+.orange3_color {
+  color: black;
+  background-color: #EAE2B7;
+}
+
+.red_color {
+  color: white;
+  background-color: #D62828;
+}

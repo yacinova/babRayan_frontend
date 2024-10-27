@@ -1,0 +1,189 @@
+/* Login.css */
+.login-container {
+  min-height: calc(100vh - 64px); /* Ajustez 64px selon la hauteur de votre navbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2rem;
+  background: linear-gradient(120deg, #EAE2B7, #FCBF49);
+  overflow: hidden;
+}
+
+/* Animations d'arrière-plan */
+.login-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.animated-circle {
+  position: absolute;
+  background: rgba(247, 127, 0, 0.1);
+  border-radius: 50%;
+  animation: float 10s infinite ease-in-out;
+}
+
+.circle-1 {
+  width: 150px;
+  height: 150px;
+  top: 10%;
+  left: 10%;
+}
+
+.circle-2 {
+  width: 100px;
+  height: 100px;
+  top: 40%;
+  right: 15%;
+  animation-delay: -5s;
+}
+
+.circle-3 {
+  width: 200px;
+  height: 200px;
+  bottom: 10%;
+  left: 20%;
+  animation-delay: -7s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-100px, -100px) rotate(55deg); }
+}
+
+/* Carte de connexion */
+.login-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  animation: cardAppear 0.5s ease-out;
+}
+
+@keyframes cardAppear {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section gauche */
+.login-features {
+  background: #003049;
+  padding: 2rem;
+  color: white;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-item {
+  background: rgba(247, 127, 0, 0.1);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Section formulaire */
+.login-form-section {
+  padding: 2rem;
+  width: 55%;
+}
+
+.login-title {
+  color: #003049;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #F77F00;
+  box-shadow: 0 0 0 2px rgba(247, 127, 0, 0.1);
+  outline: none;
+}
+
+.input-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #003049;
+}
+
+.login-button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #F77F00;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-button:hover {
+  background: #FCBF49;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .login-card {
+    flex-direction: column;
+  }
+
+  .login-features {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .login-form-section {
+    width: 100%;
+  }
+
+  .animated-circle {
+    display: none;
+  }
+}
+
+.auth_btn{
+  color: #F77F00;
+}

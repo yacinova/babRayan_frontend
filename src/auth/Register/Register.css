@@ -1,0 +1,180 @@
+/* Register.css */
+.register-container {
+  min-height: calc(100vh - 64px); /* Ajustez 64px selon la hauteur de votre navbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2rem;
+  background: linear-gradient(120deg, #FCBF49, #EAE2B7);
+  overflow: hidden;
+}
+
+/* Animations d'arrière-plan spécifiques à l'inscription */
+.register-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.floating-shape {
+  position: absolute;
+  background: rgba(247, 127, 0, 0.1);
+  animation: floatShape 20s infinite ease-in-out;
+}
+
+.shape-1 {
+  width: 200px;
+  height: 200px;
+  top: 15%;
+  right: 10%;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.shape-2 {
+  width: 150px;
+  height: 150px;
+  bottom: 20%;
+  left: 15%;
+  border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+  animation-delay: -5s;
+}
+
+@keyframes floatShape {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-20px, 20px) rotate(180deg); }
+}
+
+/* Carte d'inscription */
+.register-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  animation: fadeUp 0.5s ease-out;
+}
+
+@keyframes fadeUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section informative */
+.register-features {
+  background: #003049;
+  padding: 2rem;
+  color: white;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feature-box {
+  background: rgba(247, 127, 0, 0.1);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  animation: slideRight 0.5s ease-out;
+}
+
+@keyframes slideRight {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Section formulaire */
+.register-form-section {
+  padding: 2rem;
+  width: 55%;
+}
+
+.register-title {
+  color: #003049;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #F77F00;
+  box-shadow: 0 0 0 2px rgba(247, 127, 0, 0.1);
+  outline: none;
+}
+
+.input-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #003049;
+}
+
+.register-button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #F77F00;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.register-button:hover {
+  background: #FCBF49;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .register-card {
+    flex-direction: column;
+  }
+
+  .register-features {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .register-form-section {
+    width: 100%;
+  }
+
+  .floating-shape {
+    display: none;
+  }
+}
+
+.auth_btn{
+  color: #F77F00;
+}
