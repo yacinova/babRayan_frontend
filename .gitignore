@@ -23,6 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # Ignore video file in the assets folder
-/src/assets/videos/video.mp4
-/src/assets
-/src/assets/videos/*.mp4
+# /src/assets/videos/video.mp4
+# /src/assets/videos/*.mp4
