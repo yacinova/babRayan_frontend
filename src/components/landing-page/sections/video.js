@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import Vd from '../../../assets/videos/video.mp4';
+//import Vd from '../../../assets/videos/video.mp4';
 import './sections.css';
 
 export default function VideoComponent() {
@@ -47,9 +47,6 @@ export default function VideoComponent() {
     <section className="w-100 video_section">
       <div className="row w-100 d-flex align-items-center justify-content-center">
         <div className="col-8">
-<<<<<<< HEAD
-          <video ref={videoRef} src={Vd} loop muted autoPlay={true} />
-=======
           <video ref={videoRef} src="https://firebasestorage.googleapis.com/v0/b/bab-rayan-87f71.appspot.com/o/video.mp4?alt=media&token=6cc682dc-b7fa-4729-b2d3-ac2ad8d0df87" loop muted autoPlay={true} />
 >>>>>>> 0d756d2 (add video link)
 
