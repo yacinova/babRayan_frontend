@@ -38,8 +38,8 @@ export default function Navbar() {
               </li>
             </ul>
             <div className="buttons_nav">
-              <button className='btn login_button' onClick={() => window.location.href = "register"}>Se Connecter</button>
-              <button className='btn register_button' onClick={() => window.location.href = "login"}>S'inscrire</button>
+              <button className='btn login_button' onClick={() => window.location.href = "login"}>Se Connecter</button>
+              <button className='btn register_button' onClick={() => window.location.href = "register"}>S'inscrire</button>
               <button className='btn don_button' onClick={() => window.location.href = "donation"}> Faire un don!</button>
             </div>
           </div>
