@@ -17,6 +17,7 @@ import Parrainage from './components/pages/parrainage/parrainage'
 
 // 404
 import NotFound from './components/NotFound';
+import Actualite from './components/pages/actualité/Actualite';
 
 
 
@@ -45,6 +46,10 @@ const Router = createBrowserRouter([
       {
         path: '/parrainage',
         element:<Parrainage />
+      },
+      {
+        path: '/actualites',
+        element:<Actualite />
       },
       {
         path: '/not-found',

@@ -1,5 +1,44 @@
-.footer-background{
+.footer-background {
   color: white;
   background-color: #003049;
   padding: 10px 20px;
+}
+
+
+/* Footer Sections */
+.footer-section h4 {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+/* Footer Links */
+.footer-section p {
+  margin: 0;
+  padding: 8px 0;
+  color: #ccc;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #555;
+  transition: color 0.3s ease;
+}
+
+/* Remove border for last item */
+.footer-section p:last-child {
+  border-bottom: none;
+}
+
+/* Footer Hover Effect */
+.links_social p:hover {
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+
+
+/* Grey Text */
+.grey_text {
+  color: #a3a3a3;
 }

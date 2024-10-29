@@ -6,11 +6,11 @@ export default function Navbar() {
   const [url, setUrl] = useState('');
 
   useEffect(() => {
-    const path = window.location.pathname; 
-    const segment = path.split('/')[1]; 
+    const path = window.location.pathname;
+    const segment = path.split('/')[1];
 
-    setUrl(segment); 
-  }, []); 
+    setUrl(segment);
+  }, []);
 
   return (
     <div className={url === "" ? "sticky-top" : ""}>
@@ -19,7 +19,10 @@ export default function Navbar() {
           <a className="navbar-brand" href="/">
             <img src={Logo} alt="" />
           </a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <div className="buttons_nav d-flex ">
+            <button className='btn don_button d-lg-none' onClick={() => window.location.href = "donation"}> Faire un don!</button>
+          </div>
+          <button className="navbar-toggler navbar-toggler-custom " type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse links_nav" id="navbarText">

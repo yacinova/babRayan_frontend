@@ -41,7 +41,6 @@ export default function CustomCarousel() {
           </div>
         ))}
       </Carousel>
-      <img src="https://drive.google.com/file/d/1TxyL3ggd5xoYGByKDOHgJgbpS9n92ri0/view?usp=drive_link" alt="dd" />
     </div>
   );
 }
