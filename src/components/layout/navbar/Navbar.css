@@ -1,17 +1,11 @@
-.navbar-background{
+.navbar-background {
   color: white;
   background-color: #003049;
 }
 
-.links_nav ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  list-style: none;
-  font-size: 1.1rem;
-}
 
-.links_nav li {
+
+.links_nav .menu {
   margin: 0 1rem;
   cursor: pointer;
   font-weight: 500;
@@ -23,10 +17,52 @@
 
 }
 
-.links_nav a:hover {
+.links_nav .menu:hover {
   color: rgba(255, 255, 255, 0.568);
   scale: 1.1;
   border-bottom: 1px solid white;
+}
+
+/* Ensures that navbar items are displayed in a column layout in mobile view */
+@media (max-width: 992px) {
+  .links_nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu {
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+  }
+}
+
+/* Custom underline color for links */
+.menu a {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  /* Set desired link color */
+
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff;
+  /* Desired underline color */
+  transition: background-color 0.3s ease;
+}
+
+/* Change color on hover */
+.menu a:hover::after {
+  background-color: #ff5733;
+  /* Underline color on hover */
 }
 
 /* buttons */
@@ -42,6 +78,7 @@
   color: black;
 
 }
+
 .buttons_nav .register_button:hover {
   background-color: #eae2b7be;
   border: 1px solid #eae2b7;
@@ -53,6 +90,7 @@
   background-color: #D62828;
   border: 1px solid #D62828;
 }
+
 .buttons_nav .don_button:hover {
   background-color: #d62828b7;
   border: 1px solid #D62828;

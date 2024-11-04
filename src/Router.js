@@ -1,5 +1,5 @@
 import React from 'react';
-import { createBrowserRouter} from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 
 import Index from "./components/app"
 
@@ -14,6 +14,9 @@ import Landing from './components/landing-page/landing';
 // pages
 import Donation from './components/pages/donnation/don'
 import Parrainage from './components/pages/parrainage/parrainage'
+import Mot from './components/pages/PresidentMessage/mot'
+import About from './components/pages/about_us/about'
+import Contact from './components/pages/contact_us/contact'
 
 // 404
 import NotFound from './components/NotFound';
@@ -37,19 +40,31 @@ const Router = createBrowserRouter([
       },
       {
         path: '/register',
-        element:<Register />
+        element: <Register />
       },
       {
         path: '/donation',
-        element:<Donation />
+        element: <Donation />
+      },
+      {
+        path: '/mot_presidente',
+        element: <Mot />
+      },
+      {
+        path: '/about',
+        element: <About />
+      },
+      {
+        path: '/contact',
+        element: <Contact />
       },
       {
         path: '/parrainage',
-        element:<Parrainage />
+        element: <Parrainage />
       },
       {
         path: '/actualites',
-        element:<Actualite />
+        element: <Actualite />
       },
       {
         path: '/not-found',

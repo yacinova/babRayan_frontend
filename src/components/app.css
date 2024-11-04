@@ -46,6 +46,9 @@
 }
 
 /* palette colors */
+.blue{
+  color:#003049;
+}
 .blue_color {
   color: white;
   background-color: #003049;

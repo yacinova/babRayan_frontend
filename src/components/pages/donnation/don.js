@@ -14,18 +14,18 @@ const DonationPage = () => {
     {
       index: 1,
       amount: 200,
-      description: "🎒 Ce don permettra de fournir des fournitures scolaires et 🍎 des repas nutritifs à 2 enfants pendant un mois."
+      description: "Ce don permettra de fournir des fournitures scolaires et des repas nutritifs à 2 enfants pendant un mois."
     },
     {
       index: 2,
       amount: 500,
-      description: "📚 Ce don aidera à couvrir les frais de scolarité, 👕 les uniformes et 🎯 le soutien éducatif pour 5 enfants.",
+      description: "Ce don aidera à couvrir les frais de scolarité, les uniformes et le soutien éducatif pour 5 enfants.",
       recommended: true
     },
     {
       index: 3,
       amount: 1000,
-      description: "🏫 Ce don majeur permettra de soutenir 10 enfants avec une éducation complète et 🏥 des soins de santé."
+      description: "Ce don majeur permettra de soutenir 10 enfants avec une éducation complète et des soins de santé."
     }
   ];
 
@@ -161,7 +161,7 @@ const DonationPage = () => {
               </button>
             </div>
 
-            <div className="donation-options">
+            <div className="donation-options ">
               {donationOptions.map((option) => (
                 <div style={{ cursor: "pointer" }} key={option.index} className="donation-option-wrapper" onClick={() => setCustomAmount(option.amount)}>
                   <div className={`donation-option ${customAmount === option.amount ? 'recommended' : ''}`}>
@@ -170,8 +170,8 @@ const DonationPage = () => {
                         Recommandé
                       </div>
                     )}
-                    <div className="option-content ">
-                      <h3 className='text-center'>{option.amount} DH</h3>
+                    <div className="option-content  text-white ">
+                      <h3 className='text-center '>{option.amount} DH</h3>
                       <p>{option.description}</p>
                     </div>
                     <button className={`select-btn ${customAmount === option.amount ? 'recommended' : ''}`}>

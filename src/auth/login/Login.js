@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Lock, Heart } from 'lucide-react';
+import { Mail, Lock } from 'lucide-react';
 import './Login.css';
 import Logo from "../../assets/Logo.png"
 
@@ -48,7 +48,7 @@ export default function Login() {
 
             <div className="form-group">
               <label className="checkbox-label">
-                <input type="checkbox" />
+                <input className='me-2' type="checkbox" />
                 <span>Se souvenir de moi</span>
               </label>
             </div>
