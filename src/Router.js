@@ -21,6 +21,8 @@ import Contact from './components/pages/contact_us/contact'
 // 404
 import NotFound from './components/NotFound';
 import Actualite from './components/pages/actualité/Actualite';
+import ActualiteDetails from './components/pages/actualité/ActualiteDetails';
+import Sociaux from './components/pages/sociaux/Sociaux';
 
 
 
@@ -63,8 +65,16 @@ const Router = createBrowserRouter([
         element: <Parrainage />
       },
       {
+        path: '/sociaux',
+        element: <Sociaux />
+      },
+      {
         path: '/actualites',
         element: <Actualite />
+      },
+      {
+        path: '/actualites/:id',
+        element: <ActualiteDetails />,
       },
       {
         path: '/not-found',

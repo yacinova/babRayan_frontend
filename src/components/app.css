@@ -46,8 +46,15 @@
 }
 
 /* palette colors */
-.blue{
-  color:#003049;
+.blue {
+  color: #003049;
+}
+
+.orange-text {
+  color: #F77F00;
+}
+.red {
+  color: #D62828;
 }
 .blue_color {
   color: white;

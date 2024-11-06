@@ -8,7 +8,7 @@ export default function Blogs() {
     <section className='mt-5 blogs'>
       <div className="row mb-5 w-100 justify-content-center align-items-center">
         <div className="col-12 col-md-5">
-          <img src={Pic1} alt="orphelinat" className='img-fluid' style={{ height: "100%", width: "100%", borderRadius: "20px" }} />
+          <img src={Pic1} alt="orphelinat" className='img-fluid' style={{ height: "300px", objectFit : "cover" ,  width: "650px", borderRadius: "20px" }} />
         </div>
         <div className="col-12 col-md-5" style={{ color: "#003049" }}>
           <h2>L'orphelinat "Les Petits Étoiles"</h2>
@@ -20,7 +20,7 @@ export default function Blogs() {
       </div>
       <div className="row mb-5  w-100 justify-content-center align-items-center">
         <div className="col-12 col-md-5">
-          <img src={Pic2} alt="orphelinat" className='img-fluid' style={{ height: "100%", width: "100%", borderRadius: "20px" }} />
+          <img src={Pic2} alt="orphelinat" className='img-fluid' style={{ height: "300px", objectFit : "cover" ,  width: "650px", borderRadius: "20px" }} />
         </div>
         <div className="col-12 col-md-5" style={{ color: "#003049" }}>
           <h2>L'orphelinat "Les Petits Étoiles"</h2>
@@ -29,6 +29,9 @@ export default function Blogs() {
           <br />
           <button className='btn'>Voir Plus</button>
         </div>
+      </div>
+      <div className="text-center mb-5">
+        <button className='btn' onClick={() => window.location.href = `/actualites`}>Voir tous les actualités  </button>
       </div>
     </section>
   );

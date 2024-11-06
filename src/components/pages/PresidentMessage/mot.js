@@ -81,7 +81,6 @@ const PresidentMessage = () => {
       <div className="president-section">
         <motion.div 
           ref={ref}
-          initial="hidden"
           animate={controls}
           variants={staggerChildren}
           className="president-grid"
