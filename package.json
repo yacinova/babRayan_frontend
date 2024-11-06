@@ -57,5 +57,9 @@
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.14"
-  }
+  },
+  "description": "<h2 style= align=\"center\">First thing you should do, its to create your own <u>Branch.</u> </h2>\r # Getting Started with this project \r <p align=\"center\">\r   <ol>\r     <li>Clone the project:\r       <pre><code>git clone https://github.com/bab-rayan/reactjs-frontend.git</code></pre>\r     </li>\r     <li>\r       Navigate to the project directory:\r     </li>\r     <li>Install dependencies:\r       <pre><code>npm install</code></pre>\r     </li>\r     <li>Start the development server:\r       <pre><code>npm start</code></pre>\r     </li>\r   </ol>\r </p>",
+  "main": "postcss.config.js",
+  "author": "Fanine",
+  "license": "ISC"
 }
