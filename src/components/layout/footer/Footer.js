@@ -6,6 +6,7 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer className="footer-background text-light py-5">
+  <div></div>
       <div className="container">
         <div className="row">
           {/* About Section */}
@@ -54,7 +55,7 @@ function Footer() {
         </div>
 
         {/* Horizontal Line */}
-        <hr className="my-4" />
+        <hr className="my-4 "/>
 
         {/* Copyright Section */}
         <div className="row">

@@ -1,0 +1,40 @@
+.partner-list-page {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .thanks-message {
+    font-size: 1em;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .partners-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .partner-row {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .partner-logo {
+    width: 120px;
+    max-width: 100%;
+  }
+  
