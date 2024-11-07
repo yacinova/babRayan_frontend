@@ -17,17 +17,12 @@ import Parrainage from './components/pages/parrainage/parrainage'
 import Mot from './components/pages/PresidentMessage/mot'
 import About from './components/pages/about_us/about'
 import Contact from './components/pages/contact_us/contact'
-import Mission from './components/pages/mission/mission'
-import Chiffres from './components/pages/chiffres_c/chiffres'
-import Gouvernance from './components/pages/gouvernance/gouvernance'
-import Partenaires from './components/pages/partenaires/partenaires'
-import Actualite from './components/pages/actualité/Actualite';
-import ActualiteDetails from './components/pages/actualité/ActualiteDetails';
-import Sociaux from './components/pages/sociaux/Sociaux';
 
 // 404
 import NotFound from './components/NotFound';
-
+import Actualite from './components/pages/actualité/Actualite';
+import ActualiteDetails from './components/pages/actualité/ActualiteDetails';
+import Sociaux from './components/pages/sociaux/Sociaux';
 
 
 
@@ -64,22 +59,6 @@ const Router = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact />
-      },
-      {
-        path: '/mission',
-        element: <Mission />
-      },
-      {
-        path: '/chiffres',
-        element: <Chiffres />
-      },
-      {
-        path: '/gouvernance',
-        element: <Gouvernance />
-      },
-      {
-        path: '/partenaires',
-        element: <Partenaires />
       },
       {
         path: '/parrainage',
