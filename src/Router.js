@@ -1,94 +1,106 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 
-const NotFoundPage = () => {
-  const navigate = useNavigate();
+import Index from "./components/app"
 
-  const handleGoHome = () => {
-    navigate('/');
-  };
+// auth
+import Login from './auth/login/Login';
+import Register from './auth/Register/Register';
 
-  // Styles
-  const containerStyle = {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '100vh',
-    backgroundColor: '#f8f9fa',
-    fontFamily: 'Helvetica Neue, Arial, sans-serif',
-    color: '#333',
-    textAlign: 'center',
-    padding: '20px'
-  };
+// components
+import Landing from './components/landing-page/landing';
 
-  const contentStyle = {
-    maxWidth: '600px',
-    width: '100%'
-  };
 
-  const headingStyle = {
-    fontSize: '8em',
-    color: '#D62828',
-    margin: '0',
-    animation: 'bounce 1s ease-in-out infinite alternate'
-  };
+// pages
+import Donation from './components/pages/donnation/don'
+import Parrainage from './components/pages/parrainage/parrainage'
+import Mot from './components/pages/PresidentMessage/mot'
+import About from './components/pages/about_us/about'
+import Contact from './components/pages/contact_us/contact'
+import Chiffres from './components/pages/chiffres_c/chiffres'
+import Gouvernance from './components/pages/gouvernance/gouvernance'
+import Partenaires from './components/pages/partenaires/partenaires'
+import Mission from './components/pages/mission/mission'
+import Actualite from './components/pages/actualité/Actualite';
+import ActualiteDetails from './components/pages/actualité/ActualiteDetails';
+import Sociaux from './components/pages/sociaux/Sociaux';
 
-  const subheadingStyle = {
-    fontSize: '2em',
-    margin: '10px 0',
-    color: '#333'
-  };
+// 404
+import NotFound from './components/NotFound';
 
-  const paragraphStyle = {
-    fontSize: '1.1em',
-    color: '#555',
-    marginBottom: '30px'
-  };
 
-  const buttonStyle = {
-    padding: '12px 30px',
-    fontSize: '1em',
-    fontWeight: '600',
-    backgroundColor: '#D62828',
-    color: '#fff',
-    border: 'none',
-    borderRadius: '25px',
-    cursor: 'pointer',
-    transition: 'background-color 0.3s ease, transform 0.2s ease'
-  };
+const Router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Index />,
+    children: [
+      {
+        path: '/',
+        element: <Landing />
+      },
+      {
+        path: '/login',
+        element: <Login />
+      },
+      {
+        path: '/register',
+        element: <Register />
+      },
+      {
+        path: '/donation',
+        element: <Donation />
+      },
+      {
+        path: '/chiffres',
+        element: <Chiffres />
+      },
+      {
+        path: '/gouvernance',
+        element: <Gouvernance />
+      },
+      {
+        path: '/mot_presidente',
+        element: <Mot />
+      },
+      {
+        path: '/partenaires',
+        element: <Partenaires />
+      },
+      {
+        path: '/about',
+        element: <About />
+      },
+      {
+        path: '/contact',
+        element: <Contact />
+      },
+      {
+        path: '/parrainage',
+        element: <Parrainage />
+      },
+      {
+        path: '/sociaux',
+        element: <Sociaux />
+      },
+      {
+        path: '/actualites',
+        element: <Actualite />
+      },
+      {
+        path: '/actualites/:id',
+        element: <ActualiteDetails />,
+      },
+      {
+        path: '/mission',
+        element: <Mission />
+      },
+      {
+        path: '*',
+        element: <NotFound />
+      },
 
-  // Inline keyframes for animation
-  const bounceAnimation = `
-    @keyframes bounce {
-      from {
-        transform: translateY(0);
-      }
-      to {
-        transform: translateY(-10px);
-      }
-    }
-  `;
+    ]
+  }
+]);
 
-  return (
-    <div style={containerStyle}>
-      <style>{bounceAnimation}</style> {/* Adding keyframes directly */}
-      <div style={contentStyle}>
-        <h1 style={headingStyle}>404</h1>
-        <h2 style={subheadingStyle}>Oops! Page Not Found</h2>
-        <p style={paragraphStyle}>
-          The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
-        </p>
-        <button
-          style={buttonStyle}
-          onClick={handleGoHome}
-          onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-          onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
-        >
-          Go to Homepage
-        </button>
-      </div>
-    </div>
-  );
-};
-
-export default NotFoundPage;
+export default Router;
