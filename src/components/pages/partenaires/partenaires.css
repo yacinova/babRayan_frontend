@@ -1,0 +1,39 @@
+.partner-list-page {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.partner-list-page h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.partner-list-page .thanks-message {
+  font-size: 1em;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.partner-list-page h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.partner-list-page .partners-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.partner-list-page .partner-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.partner-list-page .partner-logo {
+  width: 120px;
+  max-width: 100%;
+}

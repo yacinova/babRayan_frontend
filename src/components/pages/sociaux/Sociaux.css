@@ -7,16 +7,6 @@
     overflow: hidden;
 }
 
-.sociaux-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background: linear-gradient(to right, #003049, #D62828, #F77F00, #FCBF49);
-}
-
 /* En-tête amélioré */
 .sociaux-section .section-header {
     position: relative;
