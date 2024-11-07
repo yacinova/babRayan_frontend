@@ -37,29 +37,29 @@ export default function Navbar() {
       style: { color: '#003049', fontSize: '15px' },
 
     },
+    {
+      key: '4',
+      label: (
+        <a href="/chiffres">Nos Chiffres</a>
+      ),
+      style: { color: '#003049', fontSize: '15px' },
+
+    },
   ];
 
   const menuMission = [
+    // {
+    //   key: '1',
+    //   label: (
+    //     <a href="/mission">Nos Missions</a>
+    //   ),
+    //   style: { color: '#003049', fontSize: '15px' },
+
+    // },
     {
       key: '1',
       label: (
-        <a href="/sustainable-model">Sustainable Model</a>
-      ),
-      style: { color: '#003049', fontSize: '15px' },
-
-    },
-    {
-      key: '2',
-      label: (
-        <a href="/impact">Impact & Results</a>
-      ),
-      style: { color: '#003049', fontSize: '15px' },
-
-    },
-    {
-      key: '3',
-      label: (
-        <a href="/partners">Our Partners</a>
+        <a href="/gouvernance">Gouvernance</a>
       ),
       style: { color: '#003049', fontSize: '15px' },
 
@@ -70,34 +70,34 @@ export default function Navbar() {
     {
       key: '1',
       label: (
-        <a href="/donate">Make a Donation</a>
+        <a href="/donation">Faire un DON</a>
       ),
       style: { color: '#003049', fontSize: '15px' },
 
     },
-    {
-      key: '2',
-      label: (
-        <a href="/volunteer">Volunteer</a>
-      ),
-      style: { color: '#003049', fontSize: '15px' },
+    // {
+    //   key: '2',
+    //   label: (
+    //     <a href="/volunteer">Volunteer</a>
+    //   ),
+    //   style: { color: '#003049', fontSize: '15px' },
 
-    },
-    {
-      key: '3',
-      label: (
-        <a href="/fundraising">Fundraising</a>
-      ),
-      style: { color: '#003049', fontSize: '15px' },
+    // },
+    // {
+    //   key: '3',
+    //   label: (
+    //     <a href="/fundraising">Fundraising</a>
+    //   ),
+    //   style: { color: '#003049', fontSize: '15px' },
 
-    },
+    // },
   ];
 
   const menuSuivre = [
     {
       key: '1',
       label: (
-        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="/actualites" rel="noopener noreferrer">Actualités</a>
       ),
       style: { color: '#003049', fontSize: '15px' },
 
@@ -105,7 +105,7 @@ export default function Navbar() {
     {
       key: '2',
       label: (
-        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="/sociaux" rel="noopener noreferrer">Réseaux Sociaux</a>
       ),
       style: { color: '#003049', fontSize: '15px' },
 
@@ -113,15 +113,7 @@ export default function Navbar() {
     {
       key: '3',
       label: (
-        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      ),
-      style: { color: '#003049', fontSize: '15px' },
-
-    },
-    {
-      key: '4',
-      label: (
-        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
+        <a href="/partenaires" rel="noopener noreferrer">Partenaires</a>
       ),
       style: { color: '#003049', fontSize: '15px' },
 
@@ -153,16 +145,17 @@ export default function Navbar() {
                   <Space> Nos Missions </Space>
                 </a>
               </Dropdown>
-              <Dropdown menu={{ items: menuSoutenir }} className='menu'>
-                <a onClick={(e) => e.preventDefault()}>
-                  <Space> Nous Soutenir </Space>
-                </a>
-              </Dropdown>
               <Dropdown menu={{ items: menuSuivre }} className='menu'>
                 <a onClick={(e) => e.preventDefault()}>
                   <Space> Nous Suivre </Space>
                 </a>
               </Dropdown>
+              <Dropdown menu={{ items: menuSoutenir }} className='menu'>
+                <a onClick={(e) => e.preventDefault()}>
+                  <Space> Nous Soutenir </Space>
+                </a>
+              </Dropdown>
+
             </div>
             <div className="buttons_nav d-flex">
               <button className='btn login_button' onClick={() => window.location.href = "/login"}>Se Connecter</button>

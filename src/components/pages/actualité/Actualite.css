@@ -1,0 +1,175 @@
+/* Styles généraux */
+.actualite-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0e398 0%, #ffffff 100%);
+}
+
+/* Styles des cartes */
+.actualite-section .news-card {
+    transition: transform 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.actualite-section .news-card:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.actualite-section .news-image {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Animation des chevrons */
+.actualite-section .chevron-animate {
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+}
+
+.actualite-section .blue {
+    color: #003049;
+}
+
+/* Styles des boutons */
+.actualite-section .btn-link {
+    text-decoration: none;
+}
+
+.actualite-section .btn-link:hover {
+    opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2.5rem;
+    }
+}
+
+
+/* Styles pour la page de détails */
+.actualite-details {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #EAE2B7 0%, #ffffff 100%);
+    overflow-x: hidden;
+}
+
+/* Animation d'entrée du contenu */
+.actualite-details .content-wrapper {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.actualite-details .content-wrapper.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Style de l'image principale */
+.actualite-details .main-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.actualite-details .main-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    transform: scale(1);
+    transition: transform 0.5s ease;
+}
+
+.actualite-details .main-image:hover {
+    transform: scale(1.02);
+}
+
+/* Style du contenu */
+.actualite-details .content-block {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* Style de la citation */
+.actualite-details .blockquote {
+    background-color: rgba(234, 226, 183, 0.3);
+    border-color: #003049 !important;
+    transition: transform 0.3s ease;
+}
+
+.actualite-details .blockquote:hover {
+    transform: translateX(10px);
+}
+
+/* Style du bouton retour */
+.actualite-details .back-button {
+    background: none;
+    border: none;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.3s ease;
+}
+
+.actualite-details .back-button:hover {
+    transform: translateX(-5px);
+}
+
+/* Animation pour les éléments qui apparaissent */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Application de l'animation aux différentes sections */
+.actualite-details .header-section {
+    animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.actualite-details .main-image-container {
+    animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.actualite-details .article-content {
+    animation: fadeInUp 0.6s ease-out 0.6s both;
+}
+
+.actualite-details .interaction-section {
+    animation: fadeInUp 0.6s ease-out 0.8s both;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .actualite-details .content-block {
+        font-size: 1rem;
+    }
+
+    .actualite-details .main-image {
+        max-height: 300px;
+    }
+
+    .actualite-details .display-4 {
+        font-size: 2rem;
+    }
+}

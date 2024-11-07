@@ -2,7 +2,6 @@
   color: white;
   background-color: #003049;
   padding: 10px 20px;
-  border-top: 2rem solid #D62828;
 }
 
 
@@ -20,7 +19,7 @@
   padding: 8px 0;
   color: #ccc;
   font-size: 0.9rem;
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid ;
   transition: color 0.3s ease;
 }
 

@@ -5,17 +5,17 @@ import CFI from '../../../assets/3rubrique/CFI.jpg';
 
 const PartnerList = () => {
   const partners = [
-    { src: {CFI}, alt: 'Partner 1' },
-    { src: {CFI}, alt: 'Partner 2' },
-    { src: {CFI}, alt: 'Partner 3' },
-    { src: {CFI}, alt: 'Partner 4' },
+    { src: CFI, alt: 'Partner 1' },
+    { src: CFI, alt: 'Partner 2' },
+    { src: CFI, alt: 'Partner 3' },
+    { src: CFI, alt: 'Partner 4' },
   ];
 
   return (
     <div className="partner-list-page">
       <h1>Remerciement</h1>
       <p className="thanks-message">
-        Nous tenons à remercier chaleureusement tous nos partenaires pour leur soutien continu et précieux. 
+        Nous tenons à remercier chaleureusement tous nos partenaires pour leur soutien continu et précieux.
         Leur contribution est essentielle à notre succès et nous permet de réaliser nos objectifs communs.
       </p>
 

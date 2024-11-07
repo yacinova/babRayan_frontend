@@ -61,7 +61,7 @@ const FoyerPage = () => {
       {/* Call-to-Action Section */}
       <section className="cta-section">
         <p>Rejoignez le combat, pour la protection de l'enfance</p>
-        <button className="donate-button">Faire un don</button>
+        <button onClick={() => window.location.href = "/donation"} className="donate-button">Faire un <b>DON !</b></button>
       </section>
     </div>
   );

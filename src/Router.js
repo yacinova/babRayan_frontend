@@ -17,14 +17,17 @@ import Parrainage from './components/pages/parrainage/parrainage'
 import Mot from './components/pages/PresidentMessage/mot'
 import About from './components/pages/about_us/about'
 import Contact from './components/pages/contact_us/contact'
-import Mission from './components/pages/mission/mission'
 import Chiffres from './components/pages/chiffres_c/chiffres'
 import Gouvernance from './components/pages/gouvernance/gouvernance'
 import Partenaires from './components/pages/partenaires/partenaires'
+import Mission from './components/pages/mission/mission'
+import Actualite from './components/pages/actualité/Actualite';
+import ActualiteDetails from './components/pages/actualité/ActualiteDetails';
+import Sociaux from './components/pages/sociaux/Sociaux';
 
 // 404
 import NotFound from './components/NotFound';
-import Actualite from './components/pages/actualité/Actualite';
+
 
 
 
@@ -63,10 +66,6 @@ const Router = createBrowserRouter([
         element: <Contact />
       },
       {
-        path: '/mission',
-        element: <Mission />
-      },
-      {
         path: '/chiffres',
         element: <Chiffres />
       },
@@ -75,21 +74,34 @@ const Router = createBrowserRouter([
         element: <Gouvernance />
       },
       {
+        path: '/parrainage',
+        element: <Parrainage />
+      },
+      {
         path: '/partenaires',
         element: <Partenaires />
       },
       {
-        path: '/parrainage',
-        element: <Parrainage />
+        path: '/sociaux',
+        element: <Sociaux />
       },
       {
         path: '/actualites',
         element: <Actualite />
       },
       {
+        path: '/actualites/:id',
+        element: <ActualiteDetails />,
+      },
+      {
+        path: '/mission',
+        element: <Mission />
+      },
+      {
         path: '*',
         element: <NotFound />
       },
+
 
     ]
   }
