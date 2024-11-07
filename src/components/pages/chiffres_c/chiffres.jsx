@@ -1,11 +1,43 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import './chiffres.css';
 import CFI from '../../../assets/3rubrique/CFI.jpg';
 
+const ChiffresPage = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
 
-const FoyerPage = () => {
+  useEffect(() => {
+    if (inView) controls.start('visible');
+  }, [controls, inView]);
+
   return (
     <div className="foyer-page">
+      {/* Hero Section */}
+      <motion.div
+        ref={ref}
+        className="hero-section"
+        initial={{ opacity: 0 }}
+        animate={controls}
+        variants={{
+          visible: { opacity: 1 },
+          hidden: { opacity: 0 }
+        }}
+        transition={{ duration: 1 }}
+      >
+        <div className="hero-content">
+          <motion.div
+            className="hero-text"
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.8, duration: 0.8 }}
+          >
+            <h1 className="hero-title">Le Foyer en Chiffres</h1>
+          </motion.div>
+        </div>
+      </motion.div>
+
       {/* Introduction Section */}
       <section className="introduction-section">
         <div className="image-container">
@@ -61,10 +93,12 @@ const FoyerPage = () => {
       {/* Call-to-Action Section */}
       <section className="cta-section">
         <p>Rejoignez le combat, pour la protection de l'enfance</p>
-        <button onClick={() => window.location.href = "/donation"} className="donate-button">Faire un <b>DON !</b></button>
+        <button onClick={() => window.location.href = "/donation"} className="donate-button">
+          Faire un <b>DON !</b>
+        </button>
       </section>
     </div>
   );
 };
 
-export default FoyerPage;
+export default ChiffresPage;

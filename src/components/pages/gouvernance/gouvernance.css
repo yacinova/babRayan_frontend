@@ -2,9 +2,9 @@
 .gouvernance-page {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   color: #333;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
-  padding: 40px 20px;
+  /* padding: 40px 20px; */
   line-height: 1.6;
 }
 
@@ -16,12 +16,16 @@
 /* Image and Text Wrapper */
 .gouvernance-page .image-text-wrapper {
   display: flex;
+  margin-top: 4rem;
+  margin-left:4rem;
   align-items: center;
   gap: 40px;
 }
 
 .gouvernance-page .image-text-wrapper.reverse {
   flex-direction: row-reverse;
+  margin-right:4rem;
+
 }
 
 /* Image Styling */

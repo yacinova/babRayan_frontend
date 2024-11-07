@@ -1,10 +1,43 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import './gouvernance.css';
 import CFI from '../../../assets/3rubrique/CFI.jpg';
 
 const Gouvernance = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
+
+  useEffect(() => {
+    if (inView) controls.start('visible');
+  }, [controls, inView]);
+
   return (
-    <div className="gouvernance-page"> 
+    <div className="gouvernance-page">
+      {/* Hero Section */}
+      <motion.div
+        ref={ref}
+        className="hero-section"
+        initial={{ opacity: 0 }}
+        animate={controls}
+        variants={{
+          visible: { opacity: 1 },
+          hidden: { opacity: 0 }
+        }}
+        transition={{ duration: 1 }}
+      >
+        <div className="hero-content">
+          <motion.div
+            className="hero-text"
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.8, duration: 0.8 }}
+          >
+            <h1 className="hero-title">Gouvernance</h1>
+          </motion.div>
+        </div>
+      </motion.div>
+
       {/* Board of Directors Section */}
       <section className="section-container">
         <div className="image-text-wrapper">

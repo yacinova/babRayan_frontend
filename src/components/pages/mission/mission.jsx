@@ -6,30 +6,37 @@ import CFI from '../../../assets/3rubrique/CFI.jpg';
 
 const MissionPage = () => {
   const controls = useAnimation();
-  const [ref, inView] = useInView({
-    threshold: 0.1,
-    triggerOnce: true
-  });
+  const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
 
   useEffect(() => {
-    if (inView) {
-      controls.start('visible');
-    }
+    if (inView) controls.start('visible');
   }, [controls, inView]);
 
+  const missionCards = [
+    { title: "Protéger", text: "En finir avec la violence et offrir un cadre sûr pour assurer le bien-être et la sécurité des enfants.", image: CFI },
+    { title: "Éduquer", text: "Favoriser l’éducation et le développement personnel, matériel et affectif des enfants, aujourd’hui et demain.", image: CFI },
+    { title: "Intégrer", text: "Assurer un lien et un avenir pour chaque enfant en facilitant son insertion et sa participation active à la société.", image: CFI },
+    { title: "Accompagner", text: "Donner de l’espoir et cheminer aux côtés des enfants dans leur évolution, en restant à l’écoute de leurs besoins et de leurs joies.", image: CFI }
+  ];
+
+  const valuesCards = [
+    { title: "Don de soi", text: "Respecter l’autre et donner sans compter, pour soi et pour le bien-être de la communauté.", image: CFI },
+    { title: "Respect", text: "Respecter l’autre dans ce qu’il est, et ce qu’il veut devenir, dans la joie et la bienveillance.", image: CFI },
+    { title: "Solidarité", text: "Nous unissons nos forces, nos compétences et nos moyens.", image: CFI }
+  ];
 
   return (
     <div className="mission-page">
       {/* Hero Section */}
-      <motion.div ref={ref} className="hero-section" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} >
-
+      <motion.div ref={ref} className="hero-section" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
         <div className="hero-content">
-          <motion.div className="hero-text" initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.8, duration: 0.8 }} >
+          <motion.div className="hero-text" initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.8, duration: 0.8 }}>
             <h1 className="hero-title">Notre Mission</h1>
           </motion.div>
         </div>
       </motion.div>
-      {/* Hero Section fake*/}
+
+      {/* Mission Statement Section */}
       <section className="m-section">
         <img src={CFI} alt="Event" className="m-image" />
         <div className="m-text">
@@ -42,7 +49,7 @@ const MissionPage = () => {
         </div>
       </section>
 
-      {/* Mission Section */}
+      {/* Mission Details Section */}
       <section className="mission-section">
         <h3>Notre mission</h3>
         <p className="mission-description">
@@ -50,26 +57,13 @@ const MissionPage = () => {
           Qu’il saura dépasser sa situation actuelle, ses blocages et ses blessures »
         </p>
         <div className="mission-cards">
-          <div className="mission-card">
-            <img src={CFI} alt="Protéger" className="mission-image" />
-            <h4>Protéger :</h4>
-            <p>En finir avec la violence et offrir un cadre sûr pour assurer le bien-être et la sécurité des enfants.</p>
-          </div>
-          <div className="mission-card">
-            <img src={CFI} alt="Éduquer" className="mission-image" />
-            <h4>Éduquer :</h4>
-            <p>Favoriser l’éducation et le développement personnel, matériel et affectif des enfants, aujourd’hui et demain.</p>
-          </div>
-          <div className="mission-card">
-            <img src={CFI} alt="Intégrer" className="mission-image" />
-            <h4>Intégrer :</h4>
-            <p>Assurer un lien et un avenir pour chaque enfant en facilitant son insertion et sa participation active à la société.</p>
-          </div>
-          <div className="mission-card">
-            <img src={CFI} alt="Accompagner" className="mission-image" />
-            <h4>Accompagner :</h4>
-            <p>Donner de l’espoir et cheminer aux côtés des enfants dans leur évolution, en restant à l’écoute de leurs besoins et de leurs joies.</p>
-          </div>
+          {missionCards.map((card, index) => (
+            <div key={index} className="mission-card">
+              <img src={card.image} alt={card.title} className="mission-image" />
+              <h4>{card.title} :</h4>
+              <p>{card.text}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -77,21 +71,13 @@ const MissionPage = () => {
       <section className="values-section">
         <h3>Nos Valeurs</h3>
         <div className="values-cards">
-          <div className="value-card">
-            <img src={CFI} alt="Don de soi" className="value-image" />
-            <h4>Don de soi</h4>
-            <p>Respecter l’autre et donner sans compter, pour soi et pour le bien-être de la communauté.</p>
-          </div>
-          <div className="value-card">
-            <img src={CFI} alt="Respect" className="value-image" />
-            <h4>Respect</h4>
-            <p>Respecter l’autre dans ce qu’il est, et ce qu’il veut devenir, dans la joie et la bienveillance.</p>
-          </div>
-          <div className="value-card">
-            <img src={CFI} alt="Solidarité" className="value-image" />
-            <h4>Solidarité</h4>
-            <p>Nous unissons nos forces, nos compétences et nos moyens.</p>
-          </div>
+          {valuesCards.map((card, index) => (
+            <div key={index} className="value-card">
+              <img src={card.image} alt={card.title} className="value-image" />
+              <h4>{card.title}</h4>
+              <p>{card.text}</p>
+            </div>
+          ))}
         </div>
       </section>
     </div>
