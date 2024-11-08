@@ -4,6 +4,14 @@ import { useInView } from 'react-intersection-observer';
 import './mission.css';
 import CFI from '../../../assets/3rubrique/CFI.jpg';
 
+const Card = ({ title, text, image, isValueCard = false }) => (
+  <div className={isValueCard ? 'value-card' : 'mission-card'}>
+    <img src={image} alt={`Image representing ${title}`} className={isValueCard ? 'value-image' : 'mission-image'} loading="lazy" />
+    <h4>{title}</h4>
+    <p>{text}</p>
+  </div>
+);
+
 const MissionPage = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
@@ -38,7 +46,7 @@ const MissionPage = () => {
 
       {/* Mission Statement Section */}
       <section className="m-section">
-        <img src={CFI} alt="Event" className="m-image" />
+        <img src={CFI} alt="Event illustrating mission statement" className="m-image" loading="lazy" />
         <div className="m-text">
           <h2>« Parce que tous les enfants sont égaux et méritent d’avoir une chance »</h2>
           <p>
@@ -57,12 +65,8 @@ const MissionPage = () => {
           Qu’il saura dépasser sa situation actuelle, ses blocages et ses blessures »
         </p>
         <div className="mission-cards">
-          {missionCards.map((card, index) => (
-            <div key={index} className="mission-card">
-              <img src={card.image} alt={card.title} className="mission-image" />
-              <h4>{card.title} :</h4>
-              <p>{card.text}</p>
-            </div>
+          {missionCards.map((card) => (
+            <Card key={card.title} title={card.title} text={card.text} image={card.image} />
           ))}
         </div>
       </section>
@@ -71,12 +75,8 @@ const MissionPage = () => {
       <section className="values-section">
         <h3>Nos Valeurs</h3>
         <div className="values-cards">
-          {valuesCards.map((card, index) => (
-            <div key={index} className="value-card">
-              <img src={card.image} alt={card.title} className="value-image" />
-              <h4>{card.title}</h4>
-              <p>{card.text}</p>
-            </div>
+          {valuesCards.map((card) => (
+            <Card key={card.title} title={card.title} text={card.text} image={card.image} isValueCard />
           ))}
         </div>
       </section>

@@ -4,6 +4,7 @@
   --text-dark: #1f2937;
   --text-light: #4b5563;
   --spacing-base: 1rem;
+  --spacing-lg: 2rem;
   --max-width: 1200px;
   --bg-light: #f7f9fb;
   --bg-secondary: #ecf0f1;
@@ -18,39 +19,36 @@
   color: var(--text-primary);
   line-height: 1.6;
   margin: 0 auto;
-  /* padding: 20px; */
-  /* max-width: var(--max-width); */
 }
 
 /* Hero Section */
-.hero-section {
+.mission-page .hero-section {
   position: relative;
   height: 17rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-image: url('../../../assets/bg.webp'); */
-  background-color: red;
+  background-color: var(--primary-red);
   background-size: cover;
   background-position: center;
   color: white;
   text-align: center;
 }
 
-.hero-overlay {
+.mission-page .hero-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
 
-.hero-content {
+.mission-page .hero-content {
   position: relative;
   z-index: 2;
   padding: var(--spacing-base);
 }
 
-.hero-title {
+.mission-page .hero-title {
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: var(--spacing-base);
@@ -63,9 +61,8 @@
   max-width: var(--max-width);
   align-items: center;
   gap: 30px;
-  margin: 2rem 0;
-  margin-left: 8rem;
-  padding: 40px;
+  margin: var(--spacing-lg) auto;
+  padding: var(--spacing-lg);
   background-color: var(--bg-light);
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -79,7 +76,7 @@
 }
 
 .m-text h2 {
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: bold;
   color: var(--text-secondary);
 }
@@ -87,17 +84,17 @@
 .m-text p {
   margin-top: 15px;
   color: var(--text-light);
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 /* Mission Details Section */
 .mission-section {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: var(--spacing-lg);
 }
 
 .mission-section h3 {
-  font-size: 26px;
+  font-size: 1.6rem;
   font-weight: bold;
   color: var(--primary-blue);
   margin-bottom: 10px;
@@ -131,7 +128,7 @@
 }
 
 .mission-card h4 {
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--primary-blue);
   margin-bottom: 10px;
 }
@@ -147,11 +144,11 @@
 /* Values Section */
 .values-section {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: var(--spacing-lg);
 }
 
 .values-section h3 {
-  font-size: 26px;
+  font-size: 1.6rem;
   font-weight: bold;
   color: var(--primary-blue);
   margin-bottom: 20px;
@@ -178,7 +175,7 @@
 }
 
 .value-card h4 {
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--primary-red);
   margin-bottom: 10px;
 }
@@ -199,6 +196,7 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    margin: var(--spacing-base);
   }
 
   .hero-title {
@@ -206,11 +204,15 @@
   }
 
   .m-text h2 {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 
   .mission-section h3,
   .values-section h3 {
-    font-size: 22px;
+    font-size: 1.4rem;
+  }
+
+  .m-section {
+    margin-left: 0; /* Remove left margin on smaller screens */
   }
 }

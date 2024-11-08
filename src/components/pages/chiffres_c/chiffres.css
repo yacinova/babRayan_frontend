@@ -3,8 +3,40 @@
   color: #333;
 }
 
+/* Hero Section */
+.foyer-page .hero-section {
+  position: relative;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  /* background: url('your-hero-image.jpg') no-repeat center center / cover; */
+}
+
+.foyer-page .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.foyer-page .hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.foyer-page .hero-title {
+  font-size: 2.5em;
+  margin: 0;
+}
+
 .foyer-page .introduction-section {
   display: flex;
+  flex-wrap: wrap;
   padding: 20px;
   max-width: 1000px;
   margin: 0 auto;
@@ -18,6 +50,7 @@
 
 .foyer-page .text-container {
   padding: 20px;
+  flex: 1;
 }
 
 .foyer-page .text-container h2 {
@@ -31,7 +64,6 @@
 
 .foyer-page .statistics-section {
   position: relative;
-  /* background: url('background-image.jpg') no-repeat center center / cover; */
   color: white;
   padding: 40px 20px;
   text-align: center;
@@ -47,6 +79,7 @@
   justify-content: space-around;
   max-width: 800px;
   margin: 20px auto 0;
+  gap: 20px;
 }
 
 .foyer-page .stat-item h3 {
@@ -71,6 +104,12 @@
   width: 100%;
   max-width: 300px;
   border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.foyer-page .gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .foyer-page .cta-section {
@@ -100,4 +139,22 @@
 
 .foyer-page .donate-button:hover {
   background-color: #f5f5f5;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .foyer-page .introduction-section,
+  .foyer-page .stats-grid,
+  .foyer-page .gallery-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .foyer-page .stat-item h3 {
+    font-size: 2em;
+  }
+
+  .foyer-page .hero-title {
+    font-size: 2em;
+  }
 }

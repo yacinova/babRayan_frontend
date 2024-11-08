@@ -1,3 +1,34 @@
+/* Hero Section */
+.General-page .hero-section {
+  position: relative;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  /* background: url('your-hero-image.jpg') no-repeat center center / cover; */
+}
+
+.General-page .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.General-page .hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.General-page .hero-title {
+  font-size: 2.5em;
+  margin: 0;
+}
+
 .partner-list-page {
   font-family: Arial, sans-serif;
   padding: 20px;
