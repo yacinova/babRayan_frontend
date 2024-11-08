@@ -30,9 +30,6 @@ import Protection from './components/pages/protection/ProtectionEnfance';
 import NotFound from './components/NotFound';
 
 
-
-
-
 const Router = createBrowserRouter([
   {
     path: '/',
@@ -55,8 +52,20 @@ const Router = createBrowserRouter([
         element: <Donation />
       },
       {
+        path: '/chiffres',
+        element: <Chiffres />
+      },
+      {
+        path: '/gouvernance',
+        element: <Gouvernance />
+      },
+      {
         path: '/mot_presidente',
         element: <Mot />
+      },
+      {
+        path: '/partenaires',
+        element: <Partenaires />
       },
       {
         path: '/about',
@@ -67,20 +76,8 @@ const Router = createBrowserRouter([
         element: <Contact />
       },
       {
-        path: '/chiffres',
-        element: <Chiffres />
-      },
-      {
-        path: '/gouvernance',
-        element: <Gouvernance />
-      },
-      {
         path: '/parrainage',
         element: <Parrainage />
-      },
-      {
-        path: '/partenaires',
-        element: <Partenaires />
       },
       {
         path: '/sociaux',
@@ -106,7 +103,6 @@ const Router = createBrowserRouter([
         path: '*',
         element: <NotFound />
       },
-
 
     ]
   }

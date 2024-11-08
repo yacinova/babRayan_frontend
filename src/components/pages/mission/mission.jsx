@@ -36,10 +36,12 @@ const MissionPage = () => {
   return (
     <div className="mission-page">
       {/* Hero Section */}
-      <motion.div ref={ref} className="hero-section" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
+      <motion.div ref={ref} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
         <div className="hero-content">
-          <motion.div className="hero-text" initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.8, duration: 0.8 }}>
+          <motion.div className="title" initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.8, duration: 0.8 }}>
             <h1 className="hero-title">Notre Mission</h1>
+            <div className="divider"></div>
+
           </motion.div>
         </div>
       </motion.div>
