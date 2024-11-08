@@ -48,16 +48,16 @@ export default function Navbar() {
   ];
 
   const menuMission = [
-    // {
-    //   key: '1',
-    //   label: (
-    //     <a href="/mission">Nos Missions</a>
-    //   ),
-    //   style: { color: '#003049', fontSize: '15px' },
-
-    // },
     {
       key: '1',
+      label: (
+        <a href="/mission">Nos Missions</a>
+      ),
+      style: { color: '#003049', fontSize: '15px' },
+
+    },
+    {
+      key: '2',
       label: (
         <a href="/gouvernance">Gouvernance</a>
       ),

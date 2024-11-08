@@ -8,6 +8,37 @@
   line-height: 1.6;
 }
 
+/* Hero Section */
+.general-page .hero-section {
+  position: relative;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  /* background: url('your-hero-image.jpg') no-repeat center center / cover; */
+}
+
+.general-page .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.general-page .hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.general-page .hero-title {
+  font-size: 2.5em;
+  margin: 0;
+}
+
 /* Section Container Styling */
 .gouvernance-page .section-container {
   margin-bottom: 60px;
@@ -46,6 +77,11 @@
   font-size: 1.8em;
   color: #c20d0d;
   margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.gouvernance-page .text-container h2:hover {
+  color: #a10a0a;
 }
 
 .gouvernance-page .text-container p {
@@ -77,15 +113,20 @@
 .gouvernance-page .partners-logos img {
   width: 150px;
   max-width: 100%;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gouvernance-page .partners-logos img:hover {
   transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Styling */
 @media (max-width: 768px) {
+  .gouvernance-page {
+    padding: 20px 10px;
+  }
+
   .gouvernance-page .image-text-wrapper {
     flex-direction: column;
   }
