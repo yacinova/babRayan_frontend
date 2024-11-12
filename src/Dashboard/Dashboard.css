@@ -1,0 +1,77 @@
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    transition: margin 0.25s ease-out;
+    background-color: #003049;
+}
+
+.navbar_dashbord {
+    background-color: #003049;
+    color: white;
+}
+
+.image_dashbord {
+    text-align: center;
+    margin: 10px 0;
+}
+
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #F77F00;
+    border-bottom: #F77F00 1px dashed;
+    border-top: #F77F00 1px dashed;
+}
+
+#sidebar-wrapper .list-group {
+    width: 15rem;
+}
+
+#sidebar-wrapper .list-group a {
+    color: white;
+    text-decoration: none;
+}
+
+#sidebar-wrapper .list-group a:hover {
+    color: #003049;
+    background-color: #F77F00;
+    font-weight: bold;
+    font-size: 1.rem;
+
+}
+
+#navbarSupportedContent a {
+    color: white;
+}
+
+#navbarSupportedContent a:hover {
+    color: #F77F00;
+}
+
+#navbarSupportedContent .dropdown-menu {
+    background-color: #003049;
+}
+
+#page-content-wrapper {
+    min-width: 100vw;
+}
+
+body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
+    margin-left: 0;
+}
+
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+
+    body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
+        margin-left: -15rem;
+    }
+}

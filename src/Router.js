@@ -28,6 +28,11 @@ import Sociaux from './components/pages/sociaux/Sociaux';
 // 404
 import NotFound from './components/NotFound';
 
+// dashboard
+import IndexDashboard from "./Dashboard/Dashboard"
+import Home from "./Dashboard/pages/Home"
+import ActualiteManage from "./Dashboard/pages/Actualite"
+import UserManage from "./Dashboard/pages/Users"
 
 const Router = createBrowserRouter([
   {
@@ -37,6 +42,26 @@ const Router = createBrowserRouter([
       {
         path: '/',
         element: <Landing />
+      },
+      {
+        path: "/dashbord",
+        element: <IndexDashboard />,
+        children: [
+          {
+            index: true,
+            element: <Home />,
+          },
+          {
+            path: 'news',
+            element: <ActualiteManage />,
+          },
+          {
+            path: 'profile',
+            element: <UserManage />,
+          },
+
+
+        ],
       },
       {
         path: '/login',
