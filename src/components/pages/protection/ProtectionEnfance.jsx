@@ -6,17 +6,17 @@ const ProtectionEnfance = () => {
   const ref = useRef(null);
 
   return (
-    <div className='protection-main'>
+    <div> 
       {/* Hero Section */}
       {/* <motion.div ref={ref} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
         <div className="hero-content">
           <motion.div className="title" initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.8, duration: 0.8 }}>
-            <h1 className="hero-title">Notre Mission</h1>
+            <h1 className="hero-title">Protection d'enfance</h1>
             <div className="divider"></div>
           </motion.div>
         </div>
       </motion.div> */}
-
+    <div className='protection-main'>
       {/* Main Content */}
       <motion.div className="protection-enfance" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
         <motion.section className="introduction" initial={{ x: -50, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1 }}>
@@ -60,6 +60,7 @@ const ProtectionEnfance = () => {
           </motion.ul>
         </motion.section>
       </motion.div>
+    </div>
     </div>
   );
 };
