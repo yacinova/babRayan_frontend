@@ -1,0 +1,34 @@
+.members_div .member-card {
+    background-color: #f9f9f9; /* Light background for cards */
+    border: none;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .members_div .member-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  }
+  
+  .members_div .member-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .members_div .member-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .members_div .member-title {
+    color: #777;
+    font-size: 1rem;
+  }
+  
+  .members_div .member-description {
+    margin-top: 10px;
+    color: #333;
+  }
+  

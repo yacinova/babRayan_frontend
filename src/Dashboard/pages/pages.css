@@ -25,3 +25,86 @@
     background-color: #002f49be;
     color: white
 }
+
+
+
+/* home */
+/* Main Dashboard Styling */
+.home_dashboard {
+    color: #003049;
+}
+
+/* Dashboard Title */
+.home_dashboard .dashboard_title {
+    color: #003049;
+}
+
+/* Card Common Styling */
+.home_dashboard .dashboard_card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.home_dashboard .dashboard_card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Animation */
+.home_dashboard .icon_container {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: moveUpDown 2s ease-in-out infinite;
+}
+.home_dashboard .users_card .icon_container , .home_dashboard .donations_card .icon_container {
+    color: #F77F00;
+}
+.home_dashboard .enfants_card .icon_container , .home_dashboard .partnerships_card .icon_container {
+    color: #003049;
+}
+
+/* Up-and-Down Animation */
+@keyframes moveUpDown {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Scale Effect on icons_and_title on Card Hover */
+.home_dashboard .dashboard_card:hover .icons_and_title {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Specific Card Colors */
+.home_dashboard .users_card , .home_dashboard .donations_card {
+    background-color: #003049;
+    color: white;
+}
+
+.home_dashboard .enfants_card , .home_dashboard .partnerships_card {
+    background-color: #FCBF49;
+    color: #003049;
+}
+
+.home_dashboard .blogs_card {
+    background-color: #D62828;
+    color: white;
+}
+
+/* Card Content Styling */
+.home_dashboard .users_card .card_title , .home_dashboard .donations_card .card_title {
+    color: #F77F00;
+}
+.home_dashboard .enfants_card .card_title , .home_dashboard .partnerships_card .card_title {
+    color: #003049;
+}
+
+
+.home_dashboard .card_value {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+

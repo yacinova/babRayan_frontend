@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Dashboard.css';
 import { Outlet } from 'react-router-dom';
 import { TfiMenu } from "react-icons/tfi";
@@ -6,9 +6,22 @@ import Logo from "../assets/Logo.png";
 import { MdOutlineSpaceDashboard } from "react-icons/md";
 import { ImNewspaper } from "react-icons/im";
 import { FaUsers } from "react-icons/fa";
+import { PiUsersFourFill } from "react-icons/pi";
 
 export default function Dashboard() {
   const sidebarToggleRef = useRef(null);
+  const userID = localStorage.getItem('userID');
+  const [userInfo, setUserInfo] = useState({});
+
+  useEffect(() => {
+    fetch(`http://localhost:7777/api/users/${userID}`)
+      .then(response => response.json())
+      .then(data => {
+        setUserInfo(data.data);
+      })
+  })
+
+
 
   useEffect(() => {
     const toggleSidebar = (event) => {
@@ -34,9 +47,16 @@ export default function Dashboard() {
     { name: 'Dashboard', icon: <MdOutlineSpaceDashboard />, path: '/' },
     { name: 'Actualités', icon: <ImNewspaper />, path: '/news' },
     { name: 'Users', icon: <FaUsers />, path: '/profile' },
+    { name: 'Members', icon: <PiUsersFourFill />, path: '/members' },
     { name: 'Settings', path: '/settings' },
   ];
 
+
+  const handleLogout = () => {
+    // empty local storage
+    localStorage.clear();
+    window.location.href = '/';
+  }
 
   return (
     <section className='dashboard'>
@@ -49,7 +69,7 @@ export default function Dashboard() {
           <div className="list-group list-group-flush">
             {menuItems.map(
               (menuItem, index) => (
-                <a className="p-3" key={index} href={`/dashbord${menuItem.path}`}><span className='me-2'>{menuItem.icon}</span> {menuItem.name} </a>
+                <a className="p-3" key={index} href={`/dashboard${menuItem.path}`}><span className='me-2'>{menuItem.icon}</span> {menuItem.name} </a>
               ))}
           </div>
 
@@ -60,11 +80,12 @@ export default function Dashboard() {
               <button className="btn" ref={sidebarToggleRef} id="sidebarToggle"><span className="text-white fw-bold"><TfiMenu /></span></button>
 
               <div className="text-center">
-                👋🏻 Bonjour, Admin !
+                👋🏻 Bonjour, Mr <b style={{ color: "#F77F00" }}>{userInfo ? `${userInfo.name} ${userInfo.lastName}` : "none"}</b>
               </div>
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
               </button>
+
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav ms-auto mt-2 mt-lg-0">
                   <li className="nav-item active"><a className="nav-link" href="#!">Home</a></li>
@@ -78,7 +99,8 @@ export default function Dashboard() {
                       <a className="dropdown-item" href="#!">Something else here</a>
                     </div>
                   </li>
-                  <li className="nav-item"><a className="nav-link" href="#!">Link</a></li>
+                  <li className="nav-item"><a className="nav-link" href="#!"><span><i className="fa-solid fa-angle-left"></i></span> Revenir au siteweb </a></li>
+                  <li className="nav-item"><a className="nav-link deconnexion" href="#!" onClick={handleLogout}><span><i className="fa-solid fa-right-from-bracket"></i></span> Déconnexion  </a></li>
                 </ul>
               </div>
             </div>

@@ -49,6 +49,12 @@
     color: #F77F00;
 }
 
+#navbarSupportedContent .deconnexion:hover {
+    background-color: #D62828;
+    border-radius: 10px;
+    color: white;
+}
+
 #navbarSupportedContent .dropdown-menu {
     background-color: #003049;
 }

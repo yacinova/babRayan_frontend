@@ -1,11 +1,67 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Mail, Lock } from 'lucide-react';
 import './Login.css';
 import Logo from "../../assets/Logo.png"
+import { notification, Button, Modal, Space } from 'antd';
 
 export default function Login() {
+
+  const [api, contextHolder] = notification.useNotification();
+
+  const openNotification = (type, title, msg) => {
+    api[type]({
+      message: title,
+      description: msg,
+      placement: "bottomLeft"
+    });
+  };
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+
+  const handleLogin = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await fetch('http://localhost:7777/api/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email,
+          password: password,
+        })
+      });
+      const data = await response.json();
+      if (data.status) {
+        localStorage.setItem('userID', data.data.user.id);
+        openNotification('success', "Bienvenue", "Connexion réussie");
+
+        setTimeout(() => {
+          window.location.href = '/';
+        }, 2000);
+      } else {
+        openNotification('error', "Erreur lors de l'inscription", data.message);
+        console.log(data);
+        
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+
+  const handleForgotPassword = async (event) => {
+    event.preventDefault();
+    console.log("password reset");
+    
+  }
+
+
   return (
     <div className="login-container">
+      {contextHolder}
       {/* Animations d'arrière-plan */}
       <div className="login-background">
         <div className="animated-circle circle-1"></div>
@@ -35,22 +91,19 @@ export default function Login() {
 
           <h1 className="login-title">Connexion 🔐</h1>
 
-          <form>
+          <form onSubmit={handleLogin}>
             <div className="form-group">
               <Mail className="input-icon" size={20} />
-              <input type="email" className="form-input" placeholder="Email" required />
+              <input type="email" className="form-input" onChange={(e) => { setEmail(e.target.value) }} placeholder="Email" required />
             </div>
 
             <div className="form-group">
               <Lock className="input-icon" size={20} />
-              <input type="password" className="form-input" placeholder="Mot de passe" required />
+              <input type="password" className="form-input" onChange={(e) => { setPassword(e.target.value) }} placeholder="Mot de passe" required />
             </div>
 
-            <div className="form-group">
-              <label className="checkbox-label">
-                <input className='me-2' type="checkbox" />
-                <span>Se souvenir de moi</span>
-              </label>
+            <div className="form-group text-end">
+              <u><span style={{cursor: 'pointer'}} onClick={handleForgotPassword}>Mot de passe oublié ?</span></u>
             </div>
 
             <button type="submit" className="login-button">

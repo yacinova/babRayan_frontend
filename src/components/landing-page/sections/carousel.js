@@ -1,7 +1,7 @@
 import React from 'react';
 import { Carousel } from 'antd';
 import "./sections.css";
-import Pic1 from "../../../assets/carousel_imgs/pic1.jpg";
+import Pic1 from "../../../assets/bg.webp";
 import Pic2 from "../../../assets/carousel_imgs/pic2.jpg";
 import Pic3 from "../../../assets/carousel_imgs/pic3.jpg";
 

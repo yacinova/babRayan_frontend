@@ -1,5 +1,8 @@
-import React from 'react';
-import { createBrowserRouter } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { createBrowserRouter, useLocation, Navigate, Outlet } from 'react-router-dom';
+import ReactGA from 'react-ga4'; // Import react-ga4
+
+
 
 import Index from "./components/app"
 
@@ -33,19 +36,75 @@ import IndexDashboard from "./Dashboard/Dashboard"
 import Home from "./Dashboard/pages/Home"
 import ActualiteManage from "./Dashboard/pages/Actualite"
 import UserManage from "./Dashboard/pages/Users"
+import MemberManage from "./Dashboard/pages/Members"
+
+import useUserRole from './userRole'; // Adjust the import path as needed
+
+
+// Function to check if user is authenticated
+const isAuthenticated = () => {
+  // Check if token exists in local storage
+  const token = localStorage.getItem('userID');
+  
+  return !!token; // Returns true if token exists, false otherwise
+};
+
+// PrivateRoute component to handle private routes
+const PrivateRoute = ({ element }) => {
+  
+  return isAuthenticated() ? element : <Navigate to="/login" replace />;
+};
+
+// PublicRoute component to handle public routes
+const PublicRoute = ({ element }) => {
+  return isAuthenticated() ? <Navigate to="/clients" replace /> : element;
+};
+
+
+const AdminRoute = ({ element }) => {
+  const Id = localStorage.getItem('userID'); // Ensure the user ID is stored in local storage
+  const { userRole, loading } = useUserRole(Id);
+
+  if (loading) {
+    return <div>Loading...</div>; // You can replace this with a spinner or loading component
+  }
+
+  return userRole === 'admin' ? element : <Navigate to="/not-found" replace />;
+};
+
+
+// Create a custom component to track page views
+const TrackPageView = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    ReactGA.send({ hitType: 'pageview', page: location.pathname });
+  }, [location]);
+
+  return null;
+};
 
 const Router = createBrowserRouter([
   {
     path: '/',
-    element: <Index />,
+    element:
+      <>
+        <TrackPageView /> {/* Track page views */}
+        <Index />
+      </>,
     children: [
       {
         path: '/',
         element: <Landing />
       },
       {
-        path: "/dashbord",
-        element: <IndexDashboard />,
+        path: "/dashboard",
+        element:
+          (<PrivateRoute element={<>
+            <TrackPageView />
+            <IndexDashboard />
+          </>} />),
+
         children: [
           {
             index: true,
@@ -59,17 +118,21 @@ const Router = createBrowserRouter([
             path: 'profile',
             element: <UserManage />,
           },
+          {
+            path: 'members',
+            element: <MemberManage />,
+          },
 
 
         ],
       },
       {
         path: '/login',
-        element: <Login />
+        element: <PublicRoute element={<Login />} />
       },
       {
         path: '/register',
-        element: <Register />
+        element: <PublicRoute element={<Register />} />
       },
       {
         path: '/donation',
@@ -127,5 +190,7 @@ const Router = createBrowserRouter([
     ]
   }
 ]);
+
+
 
 export default Router;

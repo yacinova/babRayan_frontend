@@ -16,13 +16,13 @@ export default function Index() {
 
   return (
     <section className='background'>
-      {/* if the url is /dashbord then ignore navbar */}
-      {!url.includes("dashbord") && !url.includes("dashboard") ? <Navbar /> : null}
+      {/* if the url is /dashboard then ignore navbar and footer */}
+      {!url.includes("dashboard") ? <Navbar /> : null}
       <Outlet />
-      {!url.includes("dashbord") && !url.includes("dashboard") ? <Footer /> : null}
+      {!url.includes("dashboard") ? <Footer /> : null}
 
 
-      {!url.includes("dashbord") && !url.includes("dashboard") ?
+      {!url.includes("dashboard") ?
         <button onClick={() => window.location.href = "donation"} className='red_color don_icon_animate' title='Faire un DON'>
           <i className="fa-solid fa-hand-holding-heart"></i>
         </button> : null}
