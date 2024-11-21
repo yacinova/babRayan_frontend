@@ -47,7 +47,6 @@ const DonationPage = () => {
   // const [paymentSuccess, setPaymentSuccess] = useState(false);
   // const [paymentError, setPaymentError] = useState("");
   const [formError, setFormError] = useState("");
-  //yassss
   const [isAnonymous, setIsAnonymous] = useState(false);
   const [paymentMethod, setPaymentMethod] = useState('stripe');
   const [open, setOpen] = useState(false);
@@ -73,6 +72,7 @@ const DonationPage = () => {
   ];
 
   const showDrawer = () => {
+    setShowDetails(false);
     setOpen(true);
   };
 
@@ -287,78 +287,6 @@ const DonationPage = () => {
 
   return (
     <div className="donation-page">
-      <div className="wrap">
-        <div className="donation-form">
-          <div className="form-header">Choisissez le montant</div>
-
-          <div className="progress-dots">
-            <div
-              className={`dot ${donationType === "Ponctuel" ? "active" : ""}`}
-            ></div>
-            <div
-              className={`dot ${donationType === "monthly" ? "active" : ""}`}
-            ></div>
-            <div className="arrow">→</div>
-          </div>
-
-          <div className="donation-type animate-slide-up">
-            <button
-              className={`type-button ${
-                donationType === "Ponctuel" ? "active" : ""
-              }`}
-              onClick={() => setDonationType("Ponctuel")}
-            >
-              Ponctuel
-            </button>
-            <button
-              className={`type-button ${
-                donationType === "monthly" ? "active" : ""
-              }`}
-              onClick={() => setDonationType("monthly")}
-            >
-              Mensuelle
-            </button>
-          </div>
-
-          <div className="amount-grid animate-fade-in">
-            {predefinedAmounts.map((item) => (
-              <button
-                key={item.value}
-                className={`amount-button ${
-                  amount === item.value ? "active" : ""
-                }`}
-                onClick={() => handleAmountChange(item.value)}
-              >
-                MAD {item.value}
-              </button>
-            ))}
-          </div>
-
-          <input
-            type="text"
-            placeholder="MAD Montant personnalisé"
-            className="custom-amount animate-slide-up"
-            value={customAmount}
-            onChange={(e) => {
-              setCustomAmount(e.target.value);
-              setAmount("custom");
-            }}
-          />
-
-          {formError && (
-            <div className="error-message animate-shake">
-              <AlertCircle size={20} />
-              <span>{formError}</span>
-            </div>
-          )}
-
-          <button
-            className="next-button animate-bounce-in"
-            onClick={handleNextClick}
-          >
-            Suivant <span className="arrow">→</span>
-          </button>
-        </div>
 
         <div className="header">
           <h1 className="animate__animated animate__swing">Faire un Don</h1>
@@ -366,7 +294,7 @@ const DonationPage = () => {
             Ensemble, nous pouvons faire la différence dans la vie des enfants
           </p>
         </div>
-      </div>
+
 
       {/* Payment Modal */}
       {/* <div className={`modal-overlay ${showPayment ? "active" : ""}`}>
@@ -552,6 +480,78 @@ const DonationPage = () => {
       {/* Logo section */}
       <div className="red-logo">
         <img src={logo} alt="logo" />
+
+        <div className="donation-form">
+          <div className="form-header">Choisissez le montant</div>
+
+          <div className="progress-dots">
+            <div
+              className={`dot ${donationType === "Ponctuel" ? "active" : ""}`}
+            ></div>
+            <div
+              className={`dot ${donationType === "monthly" ? "active" : ""}`}
+            ></div>
+            <div className="arrow">→</div>
+          </div>
+
+          <div className="donation-type animate-slide-up">
+            <button
+              className={`type-button ${
+                donationType === "Ponctuel" ? "active" : ""
+              }`}
+              onClick={() => setDonationType("Ponctuel")}
+            >
+              Ponctuel
+            </button>
+            <button
+              className={`type-button ${
+                donationType === "monthly" ? "active" : ""
+              }`}
+              onClick={() => setDonationType("monthly")}
+            >
+              Mensuelle
+            </button>
+          </div>
+
+          <div className="amount-grid animate-fade-in">
+            {predefinedAmounts.map((item) => (
+              <button
+                key={item.value}
+                className={`amount-button ${
+                  amount === item.value ? "active" : ""
+                }`}
+                onClick={() => handleAmountChange(item.value)}
+              >
+                MAD {item.value}
+              </button>
+            ))}
+          </div>
+
+          <input
+            type="text"
+            placeholder="MAD Montant personnalisé"
+            className="custom-amount animate-slide-up"
+            value={customAmount}
+            onChange={(e) => {
+              setCustomAmount(e.target.value);
+              setAmount("custom");
+            }}
+          />
+
+          {formError && (
+            <div className="error-message animate-shake">
+              <AlertCircle size={20} />
+              <span>{formError}</span>
+            </div>
+          )}
+
+          <button
+            className="next-button animate-bounce-in"
+            onClick={handleNextClick}
+          >
+            Suivant <span className="arrow">→</span>
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -20,7 +20,6 @@
 .red-logo img{
   display:flex;
   margin-left:2rem;
-  /* justify-content: center; */
   width: 80%;
   padding-top:2rem;
 }
@@ -33,20 +32,12 @@
   padding-top: 10rem;
 }
 
-.wrap{
-  display: flex;
-  /* padding- */
-  justify-content:space-around;
-  align-items:center;
-  height: 100vh;
-}
-
 
 /* Header styles */
 .header {
   text-align: center;
-  margin-left:2rem;
-  /* z-index */
+  margin-left:28%;
+  padding-top:3rem;
 }
 
 .header h1 {
