@@ -1,5 +1,5 @@
 .donation-page {
-  background-image: url(../../../assets/don-bg.png);
+  background-image: url(../../../assets/donation/dbg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 90vh;
@@ -10,10 +10,10 @@
 .red-logo{
   width: 300px;
   height: 600px;
-  background-color: #da0000;
+  background-color: #003049;
   position: absolute;
   top: 0;
-  left: 110px;
+  left: 100px;
   z-index:1;
 }
 
@@ -92,12 +92,12 @@
 
 /* Main Form */
 .donation-form {
-  background-color: white;
-  opacity: 0.9;
+  /* background-color: white; */
+  /* opacity: 0.9; */
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: 24px;
-  max-width: 400px;
+  max-width: 300px;
   /* margin: 0 auto; */
   z-index:9999;
   margin-top: 10px;
@@ -108,6 +108,7 @@
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 16px;
+  color:white;
 }
 
 /* Progress Dots */
@@ -127,7 +128,7 @@
 }
 
 .dot.active {
-  background-color: #003049;
+  background-color: #F77F00;
 }
 
 /* Donation Type Toggle */
@@ -148,7 +149,7 @@
 }
 
 .type-button.active {
-  background-color: #003049;
+  background-color: #F77F00;
   color: white;
 }
 
@@ -161,17 +162,19 @@
 }
 
 .amount-button {
-  padding: 8px;
+  padding: 15px;
   border: 1px solid #e5e7eb;
   border-radius: 6px;
   background: none;
   cursor: pointer;
   transition: all 0.2s ease;
+  font-weight:bold;
+  color:white;
 }
 
 .amount-button.active {
   border-color: #003049;
-  background-color: #eff6ff;
+  background-color: #F77F00;
 }
 
 /* Custom Amount Input */
@@ -193,18 +196,18 @@
 }
 
 /* Comment Section */
-.comment-section {
+/* .comment-section {
   display: flex;
   align-items: center;
   gap: 8px;
   margin-bottom: 24px;
-}
+} */
 
 /* Next Button */
 .next-button {
   width: 100%;
   padding: 12px;
-  background-color: #003049;
+  background-color: #F77F00;
   color: white;
   border: none;
   border-radius: 6px;
@@ -217,11 +220,12 @@
 }
 
 .next-button:hover {
-  background-color: #F77F00;
+  background-color: #FCBF49;
 }
 
 .arrow {
   font-size: 18px;
+  color:white;
 }
 
 /* Modal Styles */
@@ -369,7 +373,7 @@ select:focus {
 }
 
 /* Payment Modal Overlay */
-.modal-overlay {
+/* .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -388,10 +392,10 @@ select:focus {
 .modal-overlay.active {
   opacity: 1;
   visibility: visible;
-}
+} */
 
 /* Payment Card Container */
-.payment-card {
+/* .payment-card {
   background: white;
   border-radius: 12px;
   width: 90%;
@@ -406,7 +410,7 @@ select:focus {
 .modal-overlay.active .payment-card {
   transform: scale(1);
   opacity: 1;
-}
+} */
 
 /* Close Button */
 .close-button {
@@ -426,7 +430,7 @@ select:focus {
 }
 
 /* Payment Header */
-.payment-header {
+/* .payment-header {
   text-align: center;
   margin-bottom: 24px;
 }
@@ -441,14 +445,14 @@ select:focus {
   font-size: 32px;
   font-weight: bold;
   color: #003049;
-}
+} */
 
 /* Payment Form */
-.payment-form {
+/* .payment-form {
   display: flex;
   flex-direction: column;
   gap: 16px;
-}
+} */
 
 .form-group {
   display: flex;
@@ -499,17 +503,17 @@ select:focus {
   flex: 1;
 }
 
-.expiry-input,
+/* .expiry-input,
 .cvv-input {
   width: 100%;
   padding: 12px;
   border: 1px solid #e5e7eb;
   border-radius: 6px;
   font-size: 16px;
-}
+} */
 
 /* Pay Now Button */
-.pay-now-button {
+/* .pay-now-button {
   width: 100%;
   padding: 14px;
   background-color: #003049;
@@ -529,9 +533,9 @@ select:focus {
 .pay-now-button:disabled {
   background-color: #9ca3af;
   cursor: not-allowed;
-}
+} */
 
-.pay-now-button.processing {
+/* .pay-now-button.processing {
   background-color: #9ca3af;
 }
 
@@ -540,7 +544,7 @@ select:focus {
   align-items: center;
   justify-content: center;
   gap: 8px;
-}
+} */
 
 /* Success Message */
 .success-message {
@@ -619,13 +623,13 @@ select:focus {
 }
 
 /* Input Focus States */
-.card-number-input:focus,
+/* .card-number-input:focus,
 .expiry-input:focus,
 .cvv-input:focus {
   outline: none;
   border-color: #003049;
   box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
-}
+} */
 
 /* Responsive Design */
 @media (max-width: 480px) {
@@ -642,4 +646,108 @@ select:focus {
   .payment-amount {
     font-size: 24px;
   }
+}
+
+
+/* Drawer Styles */
+.custom-drawer .ant-drawer-content {
+  background-color: #ddd5a7;
+}
+
+.donation-drawer {
+  padding: 20px 10px;
+}
+
+.custom-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.donor-info-form .form-item {
+  margin-bottom: 15px;
+}
+
+.donor-info-form .ant-input {
+  border-color: #F77F00;
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+.donor-info-form .ant-input:focus {
+  border-color: #003049;
+  box-shadow: 0 0 0 2px rgba(0, 48, 73, 0.2);
+}
+
+.payment-methods {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.payment-method-card {
+  border: 2px solid rgba(0, 0, 0, 0.192);
+  border-radius: 8px;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.payment-method-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(247, 127, 0, 0.2);
+}
+
+.payment-method-card.selected {
+  border-color: #F77F00;
+  background-color: rgba(0, 48, 73, 0.05);
+}
+
+.payment-logo {
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-name {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #003049;
+}
+
+.proceed-payment-btn {
+  width: 100%;
+  margin-top: 30px;
+  padding: 12px;
+  background: #F77F00;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.proceed-payment-btn:hover {
+  background: #003049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 48, 73, 0.2);
+}
+
+/* Animation for payment methods */
+@keyframes selectAnimation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.payment-method-card.selected {
+  animation: selectAnimation 0.3s ease;
 }
