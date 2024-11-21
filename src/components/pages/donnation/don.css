@@ -1,5 +1,5 @@
 .donation-page {
-  background-image: url(../../../assets/donbg.png);
+  background-image: url(../../../assets/don-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 90vh;
@@ -7,28 +7,59 @@
   position: relative;
 }
 
+.red-logo{
+  width: 300px;
+  height: 600px;
+  background-color: #da0000;
+  position: absolute;
+  top: 0;
+  left: 110px;
+  z-index:1;
+}
+
+.red-logo img{
+  display:flex;
+  margin-left:2rem;
+  /* justify-content: center; */
+  width: 80%;
+  padding-top:2rem;
+}
+
 .donation-container {
   min-height: 100vh;
-  padding: 20px;
-  margin-right: 68rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10rem;
 }
+
+.wrap{
+  display: flex;
+  /* padding- */
+  justify-content:space-around;
+  align-items:center;
+  height: 100vh;
+}
+
 
 /* Header styles */
 .header {
   text-align: center;
+  margin-left:2rem;
+  /* z-index */
 }
 
 .header h1 {
-  font-size: 5rem;
+  font-size: 128px;
   font-weight: bold;
-  margin-bottom: 1rem;
   color: white;
 }
 
 .header p {
   color: white;
-  font-size: 15px;
+  font-size: 27px;
 }
+
 
 /* Logo Section */
 .logo-section {
@@ -62,11 +93,15 @@
 /* Main Form */
 .donation-form {
   background-color: white;
+  opacity: 0.9;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: 24px;
   max-width: 400px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  z-index:9999;
+  margin-top: 10px;
+
 }
 
 .form-header {
@@ -92,7 +127,7 @@
 }
 
 .dot.active {
-  background-color: #3b82f6;
+  background-color: #003049;
 }
 
 /* Donation Type Toggle */
@@ -113,7 +148,7 @@
 }
 
 .type-button.active {
-  background-color: #3b82f6;
+  background-color: #003049;
   color: white;
 }
 
@@ -135,7 +170,7 @@
 }
 
 .amount-button.active {
-  border-color: #3b82f6;
+  border-color: #003049;
   background-color: #eff6ff;
 }
 
@@ -169,7 +204,7 @@
 .next-button {
   width: 100%;
   padding: 12px;
-  background-color: #3b82f6;
+  background-color: #003049;
   color: white;
   border: none;
   border-radius: 6px;
@@ -182,7 +217,7 @@
 }
 
 .next-button:hover {
-  background-color: #2563eb;
+  background-color: #F77F00;
 }
 
 .arrow {
@@ -282,7 +317,7 @@
 .confirm-button {
   width: 100%;
   padding: 12px;
-  background-color: #3b82f6;
+  background-color: #003049;
   color: white;
   border: none;
   border-radius: 6px;
@@ -292,7 +327,7 @@
 }
 
 .confirm-button:hover {
-  background-color: #2563eb;
+  background-color: #F77F00;
 }
 
 /* Hover Effects */
@@ -301,14 +336,14 @@
 }
 
 .amount-button:hover {
-  border-color: #3b82f6;
+  border-color: #003049;
 }
 
 /* Focus States */
 input:focus,
 select:focus {
   outline: none;
-  border-color: #3b82f6;
+  border-color: #003049;
   box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
 }
 
@@ -405,7 +440,7 @@ select:focus {
 .payment-amount {
   font-size: 32px;
   font-weight: bold;
-  color: #3b82f6;
+  color: #003049;
 }
 
 /* Payment Form */
@@ -477,7 +512,7 @@ select:focus {
 .pay-now-button {
   width: 100%;
   padding: 14px;
-  background-color: #3b82f6;
+  background-color: #003049;
   color: white;
   border: none;
   border-radius: 6px;
@@ -488,7 +523,7 @@ select:focus {
 }
 
 .pay-now-button:hover {
-  background-color: #2563eb;
+  background-color: #F77F00;
 }
 
 .pay-now-button:disabled {
@@ -588,7 +623,7 @@ select:focus {
 .expiry-input:focus,
 .cvv-input:focus {
   outline: none;
-  border-color: #3b82f6;
+  border-color: #003049;
   box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
 }
 

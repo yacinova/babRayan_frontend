@@ -1,23 +1,27 @@
 import React, { useState, useEffect } from "react";
 import { X, CreditCard, Check, Loader2, AlertCircle } from "lucide-react";
-import './don.css';
+import logo from "../../../assets/Logo.png";
+import pic1 from "../../../assets/donation/don500.jpg";
+import pic2 from "../../../assets/donation/don800.jpg";
+import pic3 from "../../../assets/donation/don1900.jpg";
+import "./don.css";
 
 const CreditCardBrandIcon = ({ brand }) => {
   return (
     <div className={`card-brand-icon ${brand}`}>
-      {brand === 'visa' && (
+      {brand === "visa" && (
         <svg className="w-8 h-8" viewBox="0 0 24 24" fill="#1434CB">
           <path d="M21.4789 15.5837V15.4637H21.4389L21.3589 15.6237L21.2789 15.4637H21.2389V15.5837H21.2689V15.5037L21.3389 15.6437H21.3789L21.4489 15.5037V15.5837H21.4789ZM21.0489 15.5837V15.4937H21.1289V15.4637H20.9389V15.4937H21.0189V15.5837H21.0489Z" />
           <path d="M9.197 9.197C9.197 11.697 11.697 14.197 14.197 14.197C16.697 14.197 19.197 11.697 19.197 9.197C19.197 6.697 16.697 4.197 14.197 4.197C11.697 4.197 9.197 6.697 9.197 9.197Z" />
         </svg>
       )}
-      {brand === 'mastercard' && (
+      {brand === "mastercard" && (
         <svg className="w-8 h-8" viewBox="0 0 24 24">
           <circle cx="8" cy="12" r="6" fill="#EB001B" />
           <circle cx="16" cy="12" r="6" fill="#F79E1B" />
         </svg>
       )}
-      {brand === 'amex' && (
+      {brand === "amex" && (
         <svg className="w-8 h-8" viewBox="0 0 24 24" fill="#2E77BC">
           <path d="M22 4H2C1.447 4 1 4.447 1 5V19C1 19.553 1.447 20 2 20H22C22.553 20 23 19.553 23 19V5C23 4.447 22.553 4 22 4Z" />
         </svg>
@@ -27,11 +31,9 @@ const CreditCardBrandIcon = ({ brand }) => {
 };
 
 const DonationPage = () => {
-  const [donationType, setDonationType] = useState("one-time");
+  const [donationType, setDonationType] = useState("Ponctuel");
   const [amount, setAmount] = useState("");
   const [customAmount, setCustomAmount] = useState("");
-  const [cause, setCause] = useState("");
-  const [comment, setComment] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
   const [showPayment, setShowPayment] = useState(false);
   const [cardNumber, setCardNumber] = useState("");
@@ -43,44 +45,44 @@ const DonationPage = () => {
   const [paymentError, setPaymentError] = useState("");
   const [formError, setFormError] = useState("");
 
-  const predefinedAmounts = [20, 50, 100, 200, 500];
-
-  const causes = {
-    education: {
-      title: "Support Education",
-      description: "Help provide quality education to children in need",
-      image: "/api/placeholder/400/300",
+  const predefinedAmounts = [
+    {
+      value: 500,
+      description:
+        "Je couvre les frais d'hygiène, de santé et une alimentation saine",
+      image: pic1,
     },
-    CFI: {
-      title: "CFI Program",
-      description: "Provide nutritious meals to underprivileged children",
-      image: "/api/placeholder/400/300",
+    {
+      value: 800,
+      description:
+        "Je soutiens les frais de scolarité et les activités extra-scolaires",
+      image: pic2,
     },
-    palemier: {
-      title: "École Palmier",
-      description: "Support our local school development program",
-      image: "/api/placeholder/400/300",
+    {
+      value: 1900,
+      description: "Je couvre tous les frais mensuels de l'enfant",
+      image: pic3,
     },
-  };
+  ];
 
   useEffect(() => {
     const detectCardBrand = (number) => {
-      const cleanNumber = number.replace(/\D/g, '');
-      if (cleanNumber.startsWith('4')) {
-        return 'visa';
+      const cleanNumber = number.replace(/\D/g, "");
+      if (cleanNumber.startsWith("4")) {
+        return "visa";
       } else if (/^5[1-5]/.test(cleanNumber)) {
-        return 'mastercard';
+        return "mastercard";
       } else if (/^3[47]/.test(cleanNumber)) {
-        return 'amex';
+        return "amex";
       }
-      return '';
+      return "";
     };
 
     setCardBrand(detectCardBrand(cardNumber));
   }, [cardNumber]);
 
   const handleAmountChange = (value) => {
-    setFormError(""); // Clear any previous errors
+    setFormError("");
     if (typeof value === "number") {
       setAmount(value);
       setCustomAmount("");
@@ -126,13 +128,11 @@ const DonationPage = () => {
       return;
     }
 
-    if (amount === "custom" && (!customAmount || isNaN(customAmount) || parseFloat(customAmount) <= 0)) {
+    if (
+      amount === "custom" &&
+      (!customAmount || isNaN(customAmount) || parseFloat(customAmount) <= 0)
+    ) {
       setFormError("Please enter a valid donation amount");
-      return;
-    }
-
-    if (!cause) {
-      setFormError("Please select a cause");
       return;
     }
 
@@ -144,17 +144,22 @@ const DonationPage = () => {
     setPaymentError("");
 
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise((resolve) => setTimeout(resolve, 2000));
       if (Math.random() > 0.5) {
         throw new Error("Payment failed. Please try again.");
       }
       setPaymentSuccess(true);
+
+      // Reset form after successful payment
       setTimeout(() => {
         setShowPayment(false);
         setPaymentSuccess(false);
         setCardNumber("");
         setExpiryDate("");
         setCvv("");
+        setAmount("");
+        setCustomAmount("");
+        setDonationType("Ponctuel");
       }, 2000);
     } catch (error) {
       setPaymentError(error.message);
@@ -165,30 +170,33 @@ const DonationPage = () => {
 
   return (
     <div className="donation-page">
-      <div className="header">
-        <h1 className="animate-fade-in">Faire un Don</h1>
-        <p className="animate-slide-up">Ensemble, nous pouvons faire la différence dans la vie des enfants</p>
-      </div>
-
-      <div className="donation-container animate-fade-in">
+      <div className="wrap">
         <div className="donation-form">
           <div className="form-header">Choisissez le montant</div>
 
           <div className="progress-dots">
-            <div className={`dot ${donationType === "one-time" ? "active" : ""}`}></div>
-            <div className={`dot ${donationType === "monthly" ? "active" : ""}`}></div>
+            <div
+              className={`dot ${donationType === "Ponctuel" ? "active" : ""}`}
+            ></div>
+            <div
+              className={`dot ${donationType === "monthly" ? "active" : ""}`}
+            ></div>
             <div className="arrow">→</div>
           </div>
 
           <div className="donation-type animate-slide-up">
             <button
-              className={`type-button ${donationType === "one-time" ? "active" : ""}`}
-              onClick={() => setDonationType("one-time")}
+              className={`type-button ${
+                donationType === "Ponctuel" ? "active" : ""
+              }`}
+              onClick={() => setDonationType("Ponctuel")}
             >
-              One-time
+              Ponctuel
             </button>
             <button
-              className={`type-button ${donationType === "monthly" ? "active" : ""}`}
+              className={`type-button ${
+                donationType === "monthly" ? "active" : ""
+              }`}
               onClick={() => setDonationType("monthly")}
             >
               Mensuelle
@@ -196,14 +204,15 @@ const DonationPage = () => {
           </div>
 
           <div className="amount-grid animate-fade-in">
-            {predefinedAmounts.map((value, index) => (
+            {predefinedAmounts.map((item) => (
               <button
-                key={value}
-                className={`amount-button ${amount === value ? "active" : ""}`}
-                onClick={() => handleAmountChange(value)}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                key={item.value}
+                className={`amount-button ${
+                  amount === item.value ? "active" : ""
+                }`}
+                onClick={() => handleAmountChange(item.value)}
               >
-                MAD {value}
+                MAD {item.value}
               </button>
             ))}
           </div>
@@ -219,30 +228,6 @@ const DonationPage = () => {
             }}
           />
 
-          <select
-            className="cause-select animate-slide-up"
-            value={cause}
-            onChange={(e) => {
-              setCause(e.target.value);
-              setFormError("");
-            }}
-          >
-            <option value="">Choisissez votre cause</option>
-            <option value="education">Education</option>
-            <option value="CFI">CFI</option>
-            <option value="palemier">Ecole Palmier</option>
-          </select>
-
-          <div className="comment-section animate-fade-in">
-            <input
-              type="checkbox"
-              id="comment"
-              checked={comment}
-              onChange={(e) => setComment(e.checked)}
-            />
-            <label htmlFor="comment">Écrivez-nous un commentaire</label>
-          </div>
-
           {formError && (
             <div className="error-message animate-shake">
               <AlertCircle size={20} />
@@ -250,20 +235,29 @@ const DonationPage = () => {
             </div>
           )}
 
-          <button 
+          <button
             className="next-button animate-bounce-in"
             onClick={handleNextClick}
           >
-            Next
-            <span className="arrow">→</span>
+            Suivant <span className="arrow">→</span>
           </button>
+        </div>
+
+        <div className="header">
+          <h1 className="animate-fade-in">Faire un Don</h1>
+          <p className="animate-slide-up">
+            Ensemble, nous pouvons faire la différence dans la vie des enfants
+          </p>
         </div>
       </div>
 
       {/* Payment Modal */}
       <div className={`modal-overlay ${showPayment ? "active" : ""}`}>
         <div className="payment-card">
-          <button className="close-button" onClick={() => setShowPayment(false)}>
+          <button
+            className="close-button"
+            onClick={() => setShowPayment(false)}
+          >
             <X size={24} />
           </button>
 
@@ -346,7 +340,9 @@ const DonationPage = () => {
                 )}
 
                 <button
-                  className={`pay-now-button ${isProcessing ? 'processing' : ''}`}
+                  className={`pay-now-button ${
+                    isProcessing ? "processing" : ""
+                  }`}
                   onClick={handlePayment}
                   disabled={isProcessing}
                 >
@@ -356,7 +352,7 @@ const DonationPage = () => {
                       Processing...
                     </span>
                   ) : (
-                    'Pay Now'
+                    "Pay Now"
                   )}
                 </button>
               </div>
@@ -366,26 +362,36 @@ const DonationPage = () => {
       </div>
 
       {/* Details Modal */}
-      <div className={`modal-overlay ${showDetails ? "active" : ""}`} onClick={() => setShowDetails(false)}>
-        <div className="donation-details-card" onClick={(e) => e.stopPropagation()}>
-          <button className="close-button" onClick={() => setShowDetails(false)}>
+      <div
+        className={`modal-overlay ${showDetails ? "active" : ""}`}
+        onClick={() => setShowDetails(false)}
+      >
+        <div
+          className="donation-details-card"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <button
+            className="close-button"
+            onClick={() => setShowDetails(false)}
+          >
             <X size={24} />
           </button>
 
           <img
-            src={cause && causes[cause]?.image}
+            src={(() => {
+              const selectedAmount = predefinedAmounts.find(
+                (a) => a.value === amount
+              );
+              return selectedAmount ? selectedAmount.image : pic1;
+            })()}
             alt="Donation cause"
             className="donation-image"
           />
 
-          <h2 className="donation-details-title">
-            {cause && causes[cause]?.title}
-          </h2>
-
           <div className="donation-info-row">
             <span className="donation-info-label">Type de don</span>
             <span className="donation-info-value">
-              {donationType === "one-time" ? "Unique" : "Mensuel"}
+              {donationType === "Ponctuel" ? "Ponctuel" : "Mensuel"}
             </span>
           </div>
 
@@ -396,14 +402,24 @@ const DonationPage = () => {
             </span>
           </div>
 
-          <p className="donation-description">
-            {cause && causes[cause]?.description}
-          </p>
+          <div className="donation-description">
+            {(() => {
+              const selectedAmount = predefinedAmounts.find(
+                (a) => a.value === amount
+              );
+              return selectedAmount ? selectedAmount.description : "";
+            })()}
+          </div>
 
           <button className="confirm-button" onClick={handleConfirmDonation}>
             Confirmer le don
           </button>
         </div>
+      </div>
+
+      {/* Logo section */}
+      <div className="red-logo">
+        <img src={logo} alt="logo" />
       </div>
     </div>
   );
