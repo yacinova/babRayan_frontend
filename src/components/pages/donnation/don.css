@@ -7,21 +7,21 @@
   position: relative;
 }
 
-.red-logo{
+.red-logo {
   width: 300px;
   height: 600px;
   background-color: #003049;
   position: absolute;
   top: 0;
   left: 100px;
-  z-index:1;
+  z-index: 1;
 }
 
-.red-logo img{
-  display:flex;
-  margin-left:2rem;
+.red-logo img {
+  display: flex;
+  margin-left: 2rem;
   width: 80%;
-  padding-top:2rem;
+  padding-top: 2rem;
 }
 
 .donation-container {
@@ -36,8 +36,8 @@
 /* Header styles */
 .don-header {
   text-align: center;
-  margin-left:28%;
-  padding-top:3rem;
+  margin-left: 28%;
+  padding-top: 3rem;
 }
 
 .don-header h1 {
@@ -90,7 +90,7 @@
   padding: 24px;
   max-width: 300px;
   /* margin: 0 auto; */
-  z-index:9999;
+  z-index: 9999;
   margin-top: 10px;
 
 }
@@ -99,7 +99,7 @@
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 16px;
-  color:white;
+  color: white;
 }
 
 /* Progress Dots */
@@ -159,8 +159,8 @@
   background: none;
   cursor: pointer;
   transition: all 0.2s ease;
-  font-weight:bold;
-  color:white;
+  font-weight: bold;
+  color: white;
 }
 
 .amount-button.active {
@@ -216,7 +216,7 @@
 
 .arrow {
   font-size: 18px;
-  color:white;
+  color: white;
 }
 
 /* Modal Styles */
@@ -305,7 +305,7 @@
 
 .donation-info-value-amount {
   font-weight: 600;
-  font-size:1.5rem;
+  font-size: 1.5rem;
   color: #D62828;
 }
 
@@ -353,17 +353,17 @@ select:focus {
   .donation-form {
     padding: 16px;
   }
-  
+
   .amount-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .donation-details-card {
     width: 95%;
     padding: 16px;
     margin: 16px;
   }
-  
+
   .don-header h1 {
     font-size: 3rem;
   }
@@ -592,6 +592,7 @@ select:focus {
     transform: scale(0.5);
     opacity: 0;
   }
+
   100% {
     transform: scale(1);
     opacity: 1;
@@ -599,12 +600,16 @@ select:focus {
 }
 
 @keyframes shake {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateX(0);
   }
+
   25% {
     transform: translateX(-8px);
   }
+
   75% {
     transform: translateX(8px);
   }
@@ -614,6 +619,7 @@ select:focus {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -652,7 +658,7 @@ select:focus {
 }
 
 .donation-drawer {
-  padding: 20px 10px;
+  padding: 0px 10px;
 }
 
 .custom-radio-group {
@@ -740,9 +746,17 @@ select:focus {
 
 /* Animation for payment methods */
 @keyframes selectAnimation {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .payment-method-card.selected {
