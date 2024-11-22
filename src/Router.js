@@ -27,6 +27,7 @@ import Mission from './components/pages/mission/mission'
 import Actualite from './components/pages/actualité/Actualite';
 import ActualiteDetails from './components/pages/actualité/ActualiteDetails';
 import Sociaux from './components/pages/sociaux/Sociaux';
+import Protection from './components/pages/protection/ProtectionEnfance';
 
 // 404
 import NotFound from './components/NotFound';
@@ -186,6 +187,10 @@ const Router = createBrowserRouter([
       {
         path: '/mission',
         element: <Mission />
+      },
+      {
+        path: '/protection',
+        element: <Protection />
       },
       {
         path: '*',

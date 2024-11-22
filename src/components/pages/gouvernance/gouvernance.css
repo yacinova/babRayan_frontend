@@ -11,32 +11,53 @@
 /* Hero Section */
 .general-page .hero-section {
   position: relative;
-  height: 300px;
+  height: 17rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--primary-red);
+  background-size: cover;
+  background-position: center;
   color: white;
-  /* background: url('your-hero-image.jpg') no-repeat center center / cover; */
+  text-align: center;
 }
 
 .general-page .hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
+.general-page .title{
+  color: #003049;
+}
 .general-page .hero-content {
   position: relative;
-  z-index: 1;
-  text-align: center;
+  z-index: 2;
+  padding: var(--spacing-base);
 }
 
 .general-page .hero-title {
-  font-size: 2.5em;
-  margin: 0;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-top: var(--spacing-base);
+  
+}
+/* header  */
+
+.header {
+   /* display:flex; */
+
+}
+
+.header h2{
+  display: flex;
+  color:#003049;
+}
+.header p{
+  display: flex;
+  color:#F77F00 ;
 }
 
 /* Section Container Styling */
@@ -74,8 +95,9 @@
 }
 
 .gouvernance-page .text-container h2 {
-  font-size: 1.8em;
-  color: #c20d0d;
+  font-size: 2.2em;
+  /* font-weight:20rem; */
+  color: #F77F00;
   margin-bottom: 15px;
   transition: color 0.3s ease;
 }

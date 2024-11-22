@@ -1,32 +1,25 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import './chiffres.css';
 import CFI from '../../../assets/3rubrique/CFI.jpg';
 
 const ChiffresPage = () => {
 
+  const ref = useRef(null);
+
   return (
     <div className="foyer-page">
       {/* Hero Section */}
-      <motion.div 
-        className="hero-section"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <div className="hero-overlay" />
+      <motion.div ref={ref} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
         <div className="hero-content">
-          <motion.div 
-            className="hero-text"
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
-          >
-            <h1 className="hero-title">Chiffres Cles</h1>
+          <motion.div className="title" initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.8, duration: 0.8 }}>
+            <h1 className="hero-title">Chiffres clés</h1>
             <div className="divider"></div>
+
           </motion.div>
         </div>
       </motion.div>
+
 
       {/* Introduction Section */}
       <section className="introduction-section">
@@ -73,11 +66,9 @@ const ChiffresPage = () => {
 
       {/* Gallery Section */}
       <section className="gallery-section">
-        <div className="gallery">
           <img src={CFI} alt="Gallery image 1" />
           <img src={CFI} alt="Gallery image 2" />
           <img src={CFI} alt="Gallery image 3" />
-        </div>
       </section>
 
       {/* Call-to-Action Section */}
