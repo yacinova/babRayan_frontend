@@ -1,0 +1,95 @@
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+  }
+  
+  .protection-enfance {
+    padding: 40px;
+    max-width: 800px;
+    margin: auto;
+    color: #444;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    line-height: 1.7;
+  }
+  
+  h1, h2, h3 {
+    color: #005f47;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #007b5e;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+    margin-top: 40px;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+    margin-top: 30px;
+    color: #005f47;
+  }
+  
+  .introduction, .foyer {
+    margin-bottom: 40px;
+  }
+  
+  p {
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    margin: 15px 0;
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+  
+  ul.stats {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .stats li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  ul.foyer-list li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
+  strong {
+    color: #333;
+  }
+  
+  .introduction p, .foyer p, .foyer ul {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .introduction h1, .foyer h2 {
+    text-align: center;
+  }
+  
+  .protection-enfance:hover {
+    transform: translateY(-3px);
+    transition: all 0.3s ease-in-out;
+  }
+   */
