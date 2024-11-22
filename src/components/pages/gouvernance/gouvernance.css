@@ -44,6 +44,21 @@
   margin-top: var(--spacing-base);
   
 }
+/* header  */
+
+.header {
+   /* display:flex; */
+
+}
+
+.header h2{
+  display: flex;
+  color:#003049;
+}
+.header p{
+  display: flex;
+  color:#F77F00 ;
+}
 
 /* Section Container Styling */
 .gouvernance-page .section-container {
@@ -80,8 +95,9 @@
 }
 
 .gouvernance-page .text-container h2 {
-  font-size: 1.8em;
-  color: #c20d0d;
+  font-size: 2.2em;
+  /* font-weight:20rem; */
+  color: #F77F00;
   margin-bottom: 15px;
   transition: color 0.3s ease;
 }

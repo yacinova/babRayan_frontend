@@ -288,7 +288,7 @@ const DonationPage = () => {
   return (
     <div className="donation-page">
 
-        <div className="header">
+        <div className="don-header">
           <h1 className="animate__animated animate__swing">Faire un Don</h1>
           <p className="animate__animated animate__pulse">
             Ensemble, nous pouvons faire la différence dans la vie des enfants

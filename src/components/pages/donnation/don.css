@@ -1,5 +1,5 @@
 .donation-page {
-  background-image: url(../../../assets/donation/dbg.jpg);
+  background-image: url(../../../assets/donation/donation-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 90vh;
@@ -34,19 +34,19 @@
 
 
 /* Header styles */
-.header {
+.don-header {
   text-align: center;
   margin-left:28%;
   padding-top:3rem;
 }
 
-.header h1 {
+.don-header h1 {
   font-size: 128px;
   font-weight: bold;
   color: white;
 }
 
-.header p {
+.don-header p {
   color: white;
   font-size: 27px;
 }
@@ -358,7 +358,7 @@ select:focus {
     margin: 16px;
   }
   
-  .header h1 {
+  .don-header h1 {
     font-size: 3rem;
   }
 }

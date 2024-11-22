@@ -1,7 +1,10 @@
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import './gouvernance.css';
-import CFI from '../../../assets/3rubrique/CFI.jpg';
+ import CFI from '../../../assets/3rubrique/CFI.jpg';
+import pic1 from '../../../assets/gouvernance/gen.jpg';
+import pic2 from '../../../assets/gouvernance/pic3.jpg';
+import pic3 from '../../../assets/gouvernance/pic4.jpg';
 
 const Gouvernance = () => {
   const ref = useRef(null);
@@ -18,12 +21,21 @@ const Gouvernance = () => {
         </div>
       </motion.div>
 
+      <div className='header'>
+          <p>
+          Organigramme Général
+          </p>
+          <h2>
+          Nous, engagés à titres divers et complémentaires dans l’association Bab Rayan pour l’aide à l’enfance
+          </h2>
+      </div>
+
       <div className="gouvernance-page"> 
         {/* Board of Directors Section */}
         <section className="section-container">
           <div className="image-text-wrapper">
             <div className="image-container">
-              <img src={CFI} alt="Image of Conseil d'administration" />
+              <img src={pic1} alt="Image of Conseil d'administration" />
             </div>
             <div className="text-container">
               <h2>Conseil d'administration</h2>
@@ -38,7 +50,7 @@ const Gouvernance = () => {
         <section className="section-container">
           <div className="image-text-wrapper reverse">
             <div className="image-container">
-              <img src={CFI} alt="Image of Direction Générale" />
+              <img src={pic2} alt="Image of Direction Générale" />
             </div>
             <div className="text-container">
               <h2>Direction Générale</h2>
@@ -48,6 +60,25 @@ const Gouvernance = () => {
             </div>
           </div>
         </section>
+
+        <section className="section-container">
+          <div className="image-text-wrapper">
+            <div className="image-container">
+              <img src={pic3} alt="Image of Conseil d'administration" />
+            </div>
+            <div className="text-container">
+              <h2>Partenaires institutionnels</h2>
+              <p>
+              INDH (Initiative Nationale pour les Droits de l’Homme)
+Wilaya Grand Casablanca
+AREF Grand Casablanca (Académie Régional de l’Enseignement et de la Formation)
+Entraide Nationale Casa Anfa              </p>
+            </div>
+          </div>
+        </section>
+        
+
+        {/* <h2> Transparence financière</h2> */}
 
         {/* Institutional Partners Section */}
         <section className="partners-section">
