@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './rubriques.css';
 import Foyer from '../../../../assets/3rubrique/twogirls.jpg';
 import Ecole from '../../../../assets/3rubrique/education.jpg';
 import CFI from '../../../../assets/3rubrique/cfii.jpg';
 
-export default function Rubriques() {
-  const [hoveredCard, setHoveredCard] = useState(null);
+const Rubriques = () => {
 
   const rubriques = [
     { id: 1, title: "Protection de l'enfance", image: Foyer, desc: "Depuis 2014, Bab Rayan se consacre à la protection de l’enfance, assurant un environnement sûr et bienveillant pour les enfants vulnérables.", butt: "Découvrir le foyer Bab Rayan" },
@@ -14,30 +13,21 @@ export default function Rubriques() {
   ];
 
   return (
-    <section className="my-3 rubriques mx-5">
-      <div className="row w-100">
-        {rubriques.map((rubrique, index) => (
-          <div key={index} className="card border-0 bg-transparent text-light h-100 position-relative" onMouseEnter={() => setHoveredCard(rubrique.id)} onMouseLeave={() => setHoveredCard(null)}>
-            <div className="bg-transparent border-0 position-relative">
-              <div className="image-container">
-                <div className="dark-overlay"><h5 className={`card-title ${hoveredCard === rubrique.id ? 'hide-title' : ''}`}>
-                  {rubrique.title}
-                </h5></div> {/* Dark overlay added */}
-                <img
-                  src={rubrique.image}
-                  className="card-img-custom "
-                  alt={rubrique.title}
-                />
-
-                <div className={`text-overlay ${hoveredCard === rubrique.id ? 'show' : 'hide'}`}>
-                  <p>{rubrique.desc}</p>
-                  <button className="btn">{rubrique.butt}</button>
-                </div>
-              </div>
+    <div className="rubriques d-flex justify-content-center gap-5 my-4">
+      {rubriques.map((rub) => (
+        <div className="rubrique-card" key={rub.id}>
+          <div className="img-container" style={{ cursor: 'pointer' }}>
+            <img src={rub.image} alt={rub.title} className="card-img" />
+            <div className="overlay-text">
+              <span>{rub.desc}</span><br />
+              <button className="btn">{rub.butt}</button>
             </div>
+            <div className="card-title">{rub.title}</div>
           </div>
-        ))}
-      </div>
-    </section>
+        </div>
+      ))}
+    </div>
   );
-}
+};
+
+export default Rubriques;
