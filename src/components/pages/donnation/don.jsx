@@ -447,6 +447,14 @@ const DonationPage = () => {
             alt="Donation cause"
             className="donation-image"
           />
+                    <div className="donation-description">
+            {(() => {
+              const selectedAmount = predefinedAmounts.find(
+                (a) => a.value === amount
+              );
+              return selectedAmount ? selectedAmount.description : "";
+            })()}
+          </div>
 
           <div className="donation-info-row">
             <span className="donation-info-label">Type de don</span>
@@ -457,18 +465,9 @@ const DonationPage = () => {
 
           <div className="donation-info-row">
             <span className="donation-info-label">Montant</span>
-            <span className="donation-info-value">
+            <span className="donation-info-value-amount">
               MAD {amount === "custom" ? customAmount : amount}
             </span>
-          </div>
-
-          <div className="donation-description">
-            {(() => {
-              const selectedAmount = predefinedAmounts.find(
-                (a) => a.value === amount
-              );
-              return selectedAmount ? selectedAmount.description : "";
-            })()}
           </div>
 
           <button className="confirm-button" onClick={showDrawer}>

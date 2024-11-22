@@ -165,7 +165,7 @@
 
 .amount-button.active {
   border-color: #003049;
-  background-color: #F77F00;
+  background-color: #D62828;
 }
 
 /* Custom Amount Input */
@@ -301,6 +301,12 @@
 
 .donation-info-value {
   font-weight: 500;
+}
+
+.donation-info-value-amount {
+  font-weight: 600;
+  font-size:1.5rem;
+  color: #D62828;
 }
 
 .donation-description {
