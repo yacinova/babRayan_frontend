@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import 'animate.css';
 import { motion } from "framer-motion";
 import "./gouvernance.css";
 import CFI from "../../../assets/3rubrique/CFI.jpg";
@@ -46,6 +47,19 @@ const Gouvernance = () => {
         </div>
       </motion.div>
 
+      <div className="program-container">
+      <div className="text-container">
+        <h1 className="title">
+        "Engagés et unis autour d’un même espoir : un projet holistique pour chaque enfant accueilli par Bab Rayan"
+        </h1>
+        <p className="description">
+        « Au sein de l’association Bab Rayan, dédiée à la protection, au développement de l’enfance et à l’insertion professionnelle des jeunes, nous rassemblons des personnes unies par une même foi et une vision commune. Nous croyons fermement que chaque situation, aussi difficile soit-elle, peut trouver une issue positive. Chaque jeune possède en lui des potentialités insoupçonnées et mérite un avenir où il pourra s’épanouir pleinement. Notre mission est de leur offrir les moyens de se redécouvrir, de reprendre confiance en eux et de construire un avenir prometteur. »        </p>
+      </div>
+      <div className="image-container">
+        <img src={pic1} alt="Bab Rayan" className="image" />
+      </div>
+    </div>
+    
       {/* <div className='header'>
           <p>
           Organigramme Général
@@ -56,7 +70,7 @@ const Gouvernance = () => {
       </div> */}
 
 <div className="team-container">
-      <h1 className="team-title">Membres du bureau</h1>
+      <h1 className="team-title animate__animated animate__pulse">Membres du bureau</h1>
       <div className="team-grid">
         {members.map((member, index) => (
           <div className="team-member" key={index}>

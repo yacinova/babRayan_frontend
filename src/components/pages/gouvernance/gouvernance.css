@@ -46,19 +46,51 @@
 }
 /* header  */
 
-.header {
-   /* display:flex; */
 
-}
-
-.header h2{
+/* .header h2{
   display: flex;
   color:#003049;
 }
 .header p{
   display: flex;
   color:#F77F00 ;
+} */
+
+.program-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
+
+.text-container {
+  max-width: 60%;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #4f2c7f;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.image-container {
+  max-width: 35%;
+}
+
+.image {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
 
 /* members */
 
