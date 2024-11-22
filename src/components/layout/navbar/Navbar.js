@@ -59,7 +59,7 @@ export default function Navbar() {
     {
       key: '3',
       label: (
-        <a href="/contact">Nous Contacter</a>
+        <a href="/gouvernance">Gouvernance</a>
       ),
       style: { color: '#003049', fontSize: '15px' },
 
@@ -67,7 +67,7 @@ export default function Navbar() {
     {
       key: '4',
       label: (
-        <a href="/chiffres">Nos Chiffres</a>
+        <a href="/chiffres">Dates et Chiffres clés</a>
       ),
       style: { color: '#003049', fontSize: '15px' },
 
@@ -81,16 +81,31 @@ export default function Navbar() {
         <a href="/mission">Nos Missions</a>
       ),
       style: { color: '#003049', fontSize: '15px' },
-
     },
     {
       key: '2',
       label: (
-        <a href="/gouvernance">Gouvernance</a>
+        <a href="#">Protection de l'enfance</a>
       ),
       style: { color: '#003049', fontSize: '15px' },
-
     },
+    {
+      key: '3',
+      label: (
+        <a href="#">Education et scolarité</a>
+      ),
+      style: { color: '#003049', fontSize: '15px' },
+    },
+    {
+      key: '4',
+      label: (
+        <a href="#">Formation et insertion professionnelle</a>
+      ),
+      style: { color: '#003049', fontSize: '15px' },
+    },
+
+
+
   ];
 
   const menuSoutenir = [
@@ -102,22 +117,30 @@ export default function Navbar() {
       style: { color: '#003049', fontSize: '15px' },
 
     },
-    // {
-    //   key: '2',
-    //   label: (
-    //     <a href="/volunteer">Volunteer</a>
-    //   ),
-    //   style: { color: '#003049', fontSize: '15px' },
+    {
+      key: '2',
+      label: (
+        <a href="#">Parrainer un enfant</a>
+      ),
+      style: { color: '#003049', fontSize: '15px' },
 
-    // },
-    // {
-    //   key: '3',
-    //   label: (
-    //     <a href="/fundraising">Fundraising</a>
-    //   ),
-    //   style: { color: '#003049', fontSize: '15px' },
+    },
+    {
+      key: '3',
+      label: (
+        <a href="#">Devenir partenaire</a>
+      ),
+      style: { color: '#003049', fontSize: '15px' },
 
-    // },
+    },
+    {
+      key: '4',
+      label: (
+        <a href="#">Devenir bénévole</a>
+      ),
+      style: { color: '#003049', fontSize: '15px' },
+
+    },
   ];
 
   const menuSuivre = [
@@ -132,13 +155,37 @@ export default function Navbar() {
     {
       key: '2',
       label: (
-        <a href="/sociaux" rel="noopener noreferrer">Réseaux Sociaux</a>
+        <a href="/actions-solidaires" rel="noopener noreferrer">Actions solidaires</a>
       ),
       style: { color: '#003049', fontSize: '15px' },
 
     },
     {
       key: '3',
+      label: (
+        <a href="presse" rel="noopener noreferrer">Presse</a>
+      ),
+      style: { color: '#003049', fontSize: '15px' },
+
+    },
+    {
+      key: '4',
+      label: (
+        <a href="/mediatheque" rel="noopener noreferrer">Médiathèque</a>
+      ),
+      style: { color: '#003049', fontSize: '15px' },
+
+    },
+    {
+      key: '5',
+      label: (
+        <a href="/sociaux" rel="noopener noreferrer">Réseaux Sociaux</a>
+      ),
+      style: { color: '#003049', fontSize: '15px' },
+
+    },
+    {
+      key: '6',
       label: (
         <a href="/partenaires" rel="noopener noreferrer">Partenaires</a>
       ),
@@ -190,16 +237,19 @@ export default function Navbar() {
                   <Space> Nos Missions </Space>
                 </a>
               </Dropdown>
-              <Dropdown menu={{ items: menuSuivre }} className='menu'>
-                <a onClick={(e) => e.preventDefault()}>
-                  <Space> Nous Suivre </Space>
-                </a>
-              </Dropdown>
               <Dropdown menu={{ items: menuSoutenir }} className='menu'>
                 <a onClick={(e) => e.preventDefault()}>
                   <Space> Nous Soutenir </Space>
                 </a>
               </Dropdown>
+              <Dropdown menu={{ items: menuSuivre }} className='menu'>
+                <a onClick={(e) => e.preventDefault()}>
+                  <Space> Nous Suivre </Space>
+                </a>
+              </Dropdown>
+              <a className='menu' onClick={() => window.location.href = "/contact"} style={{ cursor: "pointer" }}>
+                <Space> Nous contacter </Space>
+              </a>
 
             </div>
             {userInfo && Object.keys(userInfo).length > 0 ?
@@ -212,6 +262,7 @@ export default function Navbar() {
                 >
                   <button className='btn border-top border-bottom d-none d-lg-block' onClick={(e) => e.preventDefault()}> <FaUser /> </button>
                 </Dropdown>
+
                 <button className='btn don_button d-none d-lg-block' onClick={() => window.location.href = "/donation"}> Faire un don!</button>
               </div>
               :

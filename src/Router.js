@@ -36,7 +36,8 @@ import IndexDashboard from "./Dashboard/Dashboard"
 import Home from "./Dashboard/pages/Home"
 import ActualiteManage from "./Dashboard/pages/Actualite"
 import UserManage from "./Dashboard/pages/Users"
-import MemberManage from "./Dashboard/pages/Members"
+import MemberManage from "./Dashboard/pages/members/Members"
+import SettingsManage from "./Dashboard/pages/settings/Settings"
 
 import useUserRole from './userRole'; // Adjust the import path as needed
 
@@ -121,6 +122,10 @@ const Router = createBrowserRouter([
           {
             path: 'members',
             element: <MemberManage />,
+          },
+          {
+            path: 'settings',
+            element: <SettingsManage />,
           },
 
 

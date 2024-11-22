@@ -1,0 +1,64 @@
+.settings-container {
+    max-width: 700px;
+    margin: 50px auto;
+    background: #eae2b7;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .profile-card {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    background: #fcf4e1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .profile-pic-preview {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 10px;
+  }
+  
+  .edit-form {
+    background: #fcbf49;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ant-upload-list {
+    display: none; /* Hides default upload list */
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .save-button {
+    background: #d62828;
+    border: none;
+    color: white;
+  }
+  
+  .cancel-button {
+    background: #f77f00;
+    border: none;
+    color: black;
+  }
+  

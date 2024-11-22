@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Roboto to the whole app */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
 /* overlay button */
 .don_icon_animate {
   position: fixed;
@@ -68,7 +77,7 @@
 
 .orange2_color {
   color: black;
-  background-color: #FCBF49;
+  background-color: #c2aa79;
 }
 
 .orange3_color {

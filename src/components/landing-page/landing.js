@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './landing.css';
-import CarouselComponent from './sections/carousel';
-import Rubriques from './sections/rubriques';
+import CarouselComponent from './sections/carousel/carousel';
+import Rubriques from './sections/rubriques/rubriques';
 import Chiffre from './sections/chiffre';
 import Vdeo from './sections/video';
 import Actions from './sections/Actions';

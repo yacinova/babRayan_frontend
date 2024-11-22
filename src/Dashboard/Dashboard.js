@@ -7,6 +7,7 @@ import { MdOutlineSpaceDashboard } from "react-icons/md";
 import { ImNewspaper } from "react-icons/im";
 import { FaUsers } from "react-icons/fa";
 import { PiUsersFourFill } from "react-icons/pi";
+import { IoSettingsSharp } from "react-icons/io5";
 
 export default function Dashboard() {
   const sidebarToggleRef = useRef(null);
@@ -48,7 +49,7 @@ export default function Dashboard() {
     { name: 'Actualités', icon: <ImNewspaper />, path: '/news' },
     { name: 'Users', icon: <FaUsers />, path: '/profile' },
     { name: 'Members', icon: <PiUsersFourFill />, path: '/members' },
-    { name: 'Settings', path: '/settings' },
+    { name: 'Settings', icon: <IoSettingsSharp />, path: '/settings' },
   ];
 
 
@@ -88,7 +89,7 @@ export default function Dashboard() {
 
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav ms-auto mt-2 mt-lg-0">
-                  <li className="nav-item active"><a className="nav-link" href="#!">Home</a></li>
+                  {/* <li className="nav-item active"><a className="nav-link" href="#!">Home</a></li>
                   <li className="nav-item"><a className="nav-link" href="#!">Link</a></li>
                   <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Paramètre</a>
@@ -98,8 +99,8 @@ export default function Dashboard() {
                       <div className="dropdown-divider"></div>
                       <a className="dropdown-item" href="#!">Something else here</a>
                     </div>
-                  </li>
-                  <li className="nav-item"><a className="nav-link" href="#!"><span><i className="fa-solid fa-angle-left"></i></span> Revenir au siteweb </a></li>
+                  </li> */}
+                  <li className="nav-item"><a className="nav-link" href="/"><span><i className="fa-solid fa-angle-left"></i></span> Revenir au siteweb </a></li>
                   <li className="nav-item"><a className="nav-link deconnexion" href="#!" onClick={handleLogout}><span><i className="fa-solid fa-right-from-bracket"></i></span> Déconnexion  </a></li>
                 </ul>
               </div>
