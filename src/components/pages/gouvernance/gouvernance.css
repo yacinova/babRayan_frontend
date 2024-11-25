@@ -295,7 +295,6 @@
 
 .section-title {
   text-align: center;
-
   margin-bottom: 3rem;
 }
 
@@ -367,7 +366,7 @@
 
 .report-con{
   display:flex;
-  justify-centent:center;
+  justify-content :center;
   padding:4rem;
   /* gap:2px; */
 }
