@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import 'animate.css';
-import { X, CreditCard, Check, Loader2, AlertCircle } from "lucide-react";
-import { Card, Slider, Drawer, Input, Radio, Form } from 'antd';
+import { X,  AlertCircle } from "lucide-react";
+import { Drawer, Input, Radio, Form } from 'antd';
 import logo from "../../../assets/Logo.png";
 import pic1 from "../../../assets/donation/don500.jpg";
 import pic2 from "../../../assets/donation/don800.jpg";
