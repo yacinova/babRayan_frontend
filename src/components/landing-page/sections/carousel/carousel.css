@@ -1,92 +1,105 @@
 /* caroussel */
 .images_carousel {
-    position: relative;
-  }
-  
+  position: relative;
+}
+
+.desc_carousel span {
+  display: inline-block;
+  max-width: 80%;
+  text-align: start;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+
+.content_carousel {
+  height: 660px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.carousel_slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding-left: 60px ;
+  justify-content: start;
+  align-items: center;
+}
+
+.slide_background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Dark overlay on top of the blurred image */
+.carousel_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Dark overlay */
+  z-index: 2;
+}
+
+.carousel_text {
+  position: relative;
+  color: #fff;
+  text-align: start;
+  z-index: 3;
+}
+
+.carousel_text h1 {
+  font-size: 4.7em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.carousel_text p {
+  font-size: 2.4em;
+  color: rgba(255, 255, 255, 0.829);
+  font-style: italic;
+
+}
+
+.carousel_text button {
+  background-color: #FCBF49;
+  border: 1px solid #FCBF49;
+  color: black;
+  font-size: larger;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.carousel_text button:hover {
+  background-color: #EAE2B7;
+  border: 1px solid #eae2b7;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 968px) {
   .content_carousel {
-    height: 660px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    height: 400px;
   }
-  
-  .carousel_slide {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+  .carousel_text h2 {
+    font-size: 2em;
   }
-  
-  .slide_background {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-  
-  /* Dark overlay on top of the blurred image */
-  .carousel_overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Dark overlay */
-    z-index: 2;
-  }
-  
-  .carousel_text {
-    position: relative;
-    color: #fff;
-    text-align: center;
-    z-index: 3;
-  }
-  
-  .carousel_text h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  
+
   .carousel_text p {
-    font-size: 1.2em;
-    color: rgba(255, 255, 255, 0.685);
-    font-style: italic;
-  
+    font-size: 1em;
   }
-  
-  .carousel_text button {
-    background-color: #FCBF49;
-    border: 1px solid #FCBF49;
-    color: black;
-    font-size: larger;
-    padding: 5px 10px;
-    border-radius: 10px;
-  }
-  
-  .carousel_text button:hover {
-    background-color: #EAE2B7;
-    border: 1px solid #eae2b7;
-  }
-  
-  /* Responsive adjustments */
-  @media screen and (max-width: 968px) {
-    .content_carousel {
-      height: 400px;
-    }
-  
-    .carousel_text h2 {
-      font-size: 2em;
-    }
-  
-    .carousel_text p {
-      font-size: 1em;
-    }
-  }
+}

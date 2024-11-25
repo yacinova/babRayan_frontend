@@ -1,8 +1,8 @@
 // AboutUs.js
 import React, { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import { 
-  Globe2, Users, Target, Award, Heart, 
+import {
+  Globe2, Users, Target, Award, Heart,
   CheckCircle2, ShieldCheck, GraduationCap, Lightbulb,
   Calendar, MapPin, Mail, Phone,
   Linkedin,
@@ -184,7 +184,7 @@ const AboutUs = () => {
   ];
 
   const milestones = [
-    { year: 2014, text: "Création de l’association Bab Rayan."},
+    { year: 2014, text: "Création de l’association Bab Rayan." },
     { year: 2015, text: "Ouverture du foyer Bab Rayan et accueil des enfants." },
     { year: 2016, text: "Partenariat avec l’Entraide Nationale pour la création d’EPS." },
     { year: 2017, text: "Construction de l’école palmier." },
@@ -198,7 +198,7 @@ const AboutUs = () => {
 
   useEffect(() => {
     controls.start('visible');
-    
+
     // Parallax effect on scroll
     const handleScroll = () => {
       const scrolled = window.scrollY;
@@ -216,46 +216,40 @@ const AboutUs = () => {
   return (
     <div className="about-us">
       {/* Enhanced Hero Section */}
-      <div className="hero">
-        <div className="hero-overlay"></div>
-        <div className="container">
-          <motion.div 
-            className="hero-content"
-            initial="hidden"
-            animate={controls}
-            variants={staggerChildren}
-          >
-            <motion.h1 variants={fadeInUp} className="hero-title">
-            À propos de nous
-            </motion.h1>
+      <motion.div  initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
+        <div className="hero-content">
+          <motion.div className="title" initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.8, duration: 0.8 }}>
+            <h1 className="hero-title">À propos</h1>
+            <div className="divider"></div>
+
           </motion.div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Mission & Vision Tabs Section */}
       <section className="mission-vision-section">
         <div className="container">
           <div className="tabs">
-            <button 
+            <button
               className={`tab-button ${activeTab === 'vision' ? 'active' : ''}`}
               onClick={() => setActiveTab('vision')}
             >
               Notre vision            </button>
-            <button 
+            <button
               className={`tab-button ${activeTab === 'mission' ? 'active ' : ''}`}
               onClick={() => setActiveTab('mission')}
             >
-              Notre mission
+              Nos missions
             </button>
-            <button 
+            <button
               className={`tab-button ${activeTab === 'values' ? 'active' : ''}`}
               onClick={() => setActiveTab('values')}
             >
               Nos valeurs
             </button>
           </div>
-          
-          <motion.div 
+
+          <motion.div
             className="tab-content"
             key={activeTab}
             initial={{ opacity: 0, y: 20 }}
@@ -288,15 +282,15 @@ const AboutUs = () => {
                 <p>Bab Rayan place la protection de l'enfance au cœur de sa mission. Son objectif : offrir à ces enfants un cadre de vie sécurisant, tout en restaurant leur confiance grâce à un soutien matériel et humain continu. En leur redonnant une part de leur insouciance et en les accompagnant vers la réalisation de leurs rêves — avoir un foyer et accéder à l'éducation — l'association leur permet de se projeter vers un avenir meilleur.</p>
                 <div className="mission-pillars">
                   {[
-                    { icon: <ShieldCheck  />, text: "  Protection de l’enfance", description:"Depuis 2014, Bab rayan se consacre à la protection de l’enfance, assurant un environnement sûr et bienveillant pour les enfants vulnérables. Chaque jour, l’association défend leurs droits et leur garantit un accès à une éducation de qualité, ouvrant ainsi la voie à un avenir plus prometteur."},
-                    { icon: <GraduationCap />, text: "  Éducation et scolarité" ,description: "Bab Rayan, ONG dédiée à la protection de l’enfance depuis 2014, mène un combat quotidien pour défendre les droits des enfants et leur offrir une éducation de qualité. Sa mission ultime est de leur ouvrir la voie vers un avenir meilleur"},
-                    { icon: <Heart />, text: "  CFI ",description:"Ces formations gratuites et certifiantes d’un an, sont ouvertes aux jeunes de +18 ans issus du foyer Bab Rayan, des autres établissements de protection sociale (EPS) et des jeunes en précarité de la région Grand Casablanca. Le centre est agréé par l'Entraide Nationale." }
+                    { icon: <ShieldCheck />, text: "  Protection de l’enfance", description: "Depuis 2014, Bab rayan se consacre à la protection de l’enfance, assurant un environnement sûr et bienveillant pour les enfants vulnérables. Chaque jour, l’association défend leurs droits et leur garantit un accès à une éducation de qualité, ouvrant ainsi la voie à un avenir plus prometteur." },
+                    { icon: <GraduationCap />, text: "  Éducation et scolarité", description: "Bab Rayan, ONG dédiée à la protection de l’enfance depuis 2014, mène un combat quotidien pour défendre les droits des enfants et leur offrir une éducation de qualité. Sa mission ultime est de leur ouvrir la voie vers un avenir meilleur" },
+                    { icon: <Heart />, text: "  CFI ", description: "Ces formations gratuites et certifiantes d’un an, sont ouvertes aux jeunes de +18 ans issus du foyer Bab Rayan, des autres établissements de protection sociale (EPS) et des jeunes en précarité de la région Grand Casablanca. Le centre est agréé par l'Entraide Nationale." }
                   ].map((pillar, index) => (
                     <div key={index} className="pillar">
                       {pillar.icon}
                       <span>{pillar.text}</span>
-                      <hr/>
-                    
+                      <hr />
+
                       <span>{pillar.description}</span>
                     </div>
                   ))}
@@ -324,16 +318,16 @@ const AboutUs = () => {
       {/* Enhanced Team Section */}
       <section className="team-section">
         <div className="container">
-          <motion.h2 
+          <motion.h2
             className="section-title"
             variants={fadeInUp}
             initial="hidden"
             animate={controls}
           >
             Membres du bureau
-            <hr/>
+            <hr />
           </motion.h2>
-          <motion.div 
+          <motion.div
             className="team-grid"
             variants={staggerChildren}
             initial="hidden"
@@ -355,7 +349,7 @@ const AboutUs = () => {
                   </div>
                   <div className="member-social">
                     <a href={member.social.linkedin} aria-label="LinkedIn">
-                      <Linkedin  size={20} />
+                      <Linkedin size={20} />
                     </a>
                     <a href={member.social.twitter} aria-label="Twitter">
                       <Twitter size={20} />
@@ -371,15 +365,15 @@ const AboutUs = () => {
       {/* Timeline Section */}
       <section className="timeline-section">
         <div className="container">
-          <motion.h2 
+          <motion.h2
             className="section-title"
             variants={fadeInUp}
             initial="hidden"
             animate={controls}
           >
-           Nos Dates clés
+            Nos Dates clés
           </motion.h2>
-          <motion.div 
+          <motion.div
             className="timeline"
             variants={staggerChildren}
             initial="hidden"
@@ -389,7 +383,7 @@ const AboutUs = () => {
             {milestones.map((milestone, index) => (
               <motion.div key={index} className="timeline-item" variants={fadeInUp}>
                 {/* {index !== milestones.length - 1 ? ( */}
-                  <div className="timeline-marker"></div>
+                <div className="timeline-marker"></div>
                 {/* ) : (
                    <div className="timeline-marker last"></div>
                )} */}
@@ -406,16 +400,16 @@ const AboutUs = () => {
       {/* Achievements Section */}
       <section className="achievements-section">
         <div className="container">
-          <motion.h2 
+          <motion.h2
             className="section-title"
             variants={fadeInUp}
             initial="hidden"
             animate={controls}
           >
             Nos réalisations
-            <hr/>
+            <hr />
           </motion.h2>
-          <motion.div 
+          <motion.div
             className="achievements-grid"
             variants={staggerChildren}
             initial="hidden"
@@ -435,7 +429,7 @@ const AboutUs = () => {
       {/* Contact Section */}
       <section className="contact-section">
         <div className="container">
-          <motion.h2 
+          <motion.h2
             className="section-title"
             variants={fadeInUp}
             initial="hidden"
@@ -443,50 +437,50 @@ const AboutUs = () => {
           >
             Entrer en contact
           </motion.h2>
-          <motion.div 
+          <motion.div
             className="contact-grid"
             variants={staggerChildren}
             initial="hidden"
             animate={controls}
           >
-              <div className="contact-item">
-                <MapPin className="contact-icon" />
-                <div>
-                  <h3>Visitez-nous</h3>
-                  <p>Bv Palemier., Casablanca, Maroc</p>
-                </div>
+            <div className="contact-item">
+              <MapPin className="contact-icon" />
+              <div>
+                <h3>Visitez-nous</h3>
+                <p>Bv Palemier., Casablanca, Maroc</p>
               </div>
-              <div className="contact-item">
-                <Mail className="contact-icon" />
-                <div>
-                  <h3>Email Us</h3>
-                  <p>hello@organization.org</p>
-                </div>
+            </div>
+            <div className="contact-item">
+              <Mail className="contact-icon" />
+              <div>
+                <h3>Email Us</h3>
+                <p>hello@organization.org</p>
               </div>
-              <div className="contact-item">
-                <Phone className="contact-icon" />
-                <div>
-                  <h3>Call Us</h3>
-                  <p>+1 (234) 567-8900</p>
-                </div>
+            </div>
+            <div className="contact-item">
+              <Phone className="contact-icon" />
+              <div>
+                <h3>Call Us</h3>
+                <p>+1 (234) 567-8900</p>
               </div>
-              <div className="contact-item">
-                <Calendar className="contact-icon" />
-                <div>
-                  <h3>Working Hours</h3>
-                  <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
-                </div>
+            </div>
+            <div className="contact-item">
+              <Calendar className="contact-icon" />
+              <div>
+                <h3>Working Hours</h3>
+                <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
               </div>
-              </motion.div>
-            <motion.div className="social-links" variants={fadeInUp}>
-              <h3>Follow Us</h3>
-              <div className="social-icons">
-                <a href="#" aria-label="Facebook"><Facebook /></a>
-                <a href="#" aria-label="Twitter"><Twitter /></a>
-                <a href="#" aria-label="LinkedIn"><Linkedin /></a>
-                <a href="#" aria-label="Instagram"><Instagram /></a>
-              </div>
-            </motion.div>
+            </div>
+          </motion.div>
+          <motion.div className="social-links" variants={fadeInUp}>
+            <h3>Follow Us</h3>
+            <div className="social-icons">
+              <a href="#" aria-label="Facebook"><Facebook /></a>
+              <a href="#" aria-label="Twitter"><Twitter /></a>
+              <a href="#" aria-label="LinkedIn"><Linkedin /></a>
+              <a href="#" aria-label="Instagram"><Instagram /></a>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>

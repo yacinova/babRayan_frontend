@@ -1,6 +1,6 @@
 /* General Styling */
 .gouvernance-page {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   color: #333;
   max-width: 1200px;
   margin: 0 auto;
@@ -29,7 +29,7 @@
   z-index: 1;
 }
 
-.general-page .title{
+.general-page .title {
   color: #003049;
 }
 .general-page .hero-content {
@@ -42,22 +42,137 @@
   font-size: 3.5rem;
   font-weight: 700;
   margin-top: var(--spacing-base);
-  
-}
-/* header  */
-
-.header {
-   /* display:flex; */
-
 }
 
-.header h2{
+.program-container {
   display: flex;
-  color:#003049;
+  justify-content: space-between;
+  align-items: center;
+  padding: 70px;
+  gap: 2rem;
 }
-.header p{
-  display: flex;
-  color:#F77F00 ;
+
+.text-container {
+  max-width: 40%;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4f2c7f;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.image-container {
+  max-width: 60%;
+  max-height: 100%;
+  height: 28rem;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* members */
+
+.team-container {
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 5rem;
+
+  /* font-family: Arial, sans-serif; */
+}
+
+.team-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  /* text-transform: uppercase; */
+  color: #333;
+  border-bottom: 5px solid #c00;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.team-grid {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 20px;
+  padding-top: 3rem;
+}
+
+.team-member {
+  /* background: #f9f9f9; */
+  /* border: 1px solid #ddd; */
+  /* border-radius: 10px; */
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+  max-width: 450px;
+}
+
+.avatar-placeholder {
+  width: 150px;
+  height: 150px;
+  background: #ddd;
+  border-radius: 50%;
+  border: 4px solid #d62828;
+  margin: 0 auto 10px;
+  overflow: hidden;
+}
+
+.avatar-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-member h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 10px 0 5px;
+  color: #d62828;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.team-member span {
+  font-size: 1.2rem;
+  color: #d62828;
+}
+
+/* Responsive Design */
+@media screen and (max-width:2000px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Section Container Styling */
@@ -77,15 +192,16 @@
 }
 
 /* Image Styling */
-.gouvernance-page .image-container img {
-  width: 100%;
+.gouvernance-page .gen-image-container img {
+  width: 600px;
+  height:250px;
   max-width: 500px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
 }
 
-.gouvernance-page .image-container img:hover {
+.gouvernance-page .gen-image-container img:hover {
   transform: scale(1.02);
 }
 
@@ -97,7 +213,7 @@
 .gouvernance-page .text-container h2 {
   font-size: 2.2em;
   /* font-weight:20rem; */
-  color: #F77F00;
+  color: #f77f00;
   margin-bottom: 15px;
   transition: color 0.3s ease;
 }
@@ -168,4 +284,90 @@
   .gouvernance-page .partners-logos img {
     width: 100px;
   }
+}
+/* pdf download part */
+
+.transparency-section {
+  padding: 4rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+
+  margin-bottom: 3rem;
+}
+
+.collaboration-text {
+  color: #ff6b00;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.main-title {
+  color: #4a5568;
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.report-card {
+  margin-bottom: 2rem;
+}
+
+.rep-image-container {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.report-image {
+  width: 400px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo-overlay {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 40px;
+  height: 40px;
+}
+
+.report-title {
+  font-size: 1.25rem;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.report-description {
+  color: #718096;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.download-btn {
+  border: 1px solid #cbd5e0;
+  color: #4a5568;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.download-btn:hover {
+  background-color: #f7fafc;
+  color: #4a5568;
+}
+
+.report-con{
+  display:flex;
+  justify-centent:center;
+  padding:4rem;
+  /* gap:2px; */
 }

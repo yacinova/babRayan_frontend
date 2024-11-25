@@ -11,13 +11,13 @@ export default function CustomCarousel() {
 
     {
       image: Pic3,
-      title: "Parce que chaque enfant mérite un bon départ dans la vie",
-      description: "L’association Bab Rayan, reconnue d’utilité publique, œuvre depuis 2014 à accompagner les enfants vulnérables vers un avenir prometteur. ",
+      title: "Chaque enfant mérite un bon départ dans la vie",
+      description: "L’association Bab Rayan agit depuis 2014 pour transformer la vie des enfants en difficulté. ",
     },
     {
       image: Pic2,
       title: "Protéger, éduquer, accompagner",
-      description: `Bab Rayan mène un combat quotidien pour défendre les droits des enfants en leur offrant un foyer sécurisant et une éducation de qualité.`,
+      description: `Bab Rayan défend les droits des enfants en leur offrant un foyer sécurisant et une éducation de qualité.`,
     },
     {
       image: Pic6,
@@ -27,7 +27,7 @@ export default function CustomCarousel() {
     {
       image: Pic7,
       title: "Un Engagement qui a du sens",
-      description: "Nous nous engageons avec vous à offrir les ressources et l’accompagnement essentiels à l’épanouissement et l’autonomie de ces jeunes.",
+      description: "Rejoignez le combat pour la protection de l’enfance, engagez-vous en devenant donateur, partenaire ou bénévole.",
     },
 
   ];
@@ -38,15 +38,15 @@ export default function CustomCarousel() {
   return (
     <div className='images_carousel'>
 
-<Carousel autoplaySpeed={3000} speed={1500} autoplay dots arrows>
+      <Carousel autoplaySpeed={99993000} speed={1500} autoplay dots arrows>
         {slides.map((slide, index) => (
           <div key={index} className="content_carousel">
             <div className="carousel_slide">
               <img src={slide.image} alt="slide background" className="slide_background" />
-              <div className="carousel_overlay"></div> {/* Dark overlay */}
+              <div className="carousel_overlay"></div>
               <div className="carousel_text">
                 <h1>{slide.title}</h1>
-                <p className='desc_carousel'>{slide.description}</p>
+                <p className='desc_carousel'><span>{slide.description}</span></p>
                 <button onClick={() => navigateTo("/about")} >En savoir plus</button>
               </div>
             </div>

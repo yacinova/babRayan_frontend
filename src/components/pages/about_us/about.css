@@ -4,50 +4,26 @@
   line-height: 1.6;
 }
 
-.hero {
-  /* background: linear-gradient(90deg, #D62828, #FCBF49); */
-  background-image: url('../../../assets/bg.webp');
-  color: white;
-  padding: 80px 20px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  background-size: cover;
+.about-us .title {
+  color: #003049;
 }
 
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
+.about-us .hero-content {
+  position: relative;
+  z-index: 2;
+  padding: var(--spacing-base);
+}
+
+.about-us .hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-top: var(--spacing-base);
 }
 
 .hero-title {
   font-size: 3.5rem;
   margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.hero-subtitle {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-}
-
-.stat-item {
-  margin: 0 15px;
-}
-
-.stat-number {
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-
-.stat-label {
-  display: block;
-  font-size: 1rem;
-  opacity: 0.8;
 }
 
 .mission-vision-section {
@@ -155,16 +131,16 @@
 }
 
 .timeline {
-    position:relative;
+  position: relative;
 }
 
 .timeline-ligne {
-    position:absolute;
-    height:87%;
-    width: 3px;
-    background-color:#003049;
-    top:5px;
-    left:-16px;
+  position: absolute;
+  height: 87%;
+  width: 3px;
+  background-color: #003049;
+  top: 5px;
+  left: -16px;
 }
 
 .timeline-item {
@@ -247,10 +223,6 @@
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.5rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.2rem;
   }
 
   .section-title {

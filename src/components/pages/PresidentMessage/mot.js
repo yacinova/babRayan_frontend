@@ -46,7 +46,6 @@ const PresidentMessage = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <div className="hero-overlay" />
 
         <div className="hero-content">
           <motion.div 

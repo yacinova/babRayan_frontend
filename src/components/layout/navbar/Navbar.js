@@ -219,7 +219,9 @@ export default function Navbar() {
             <img src={Logo} alt="Logo" />
           </a>
           <div className="buttons_nav d-flex">
-            <button className='btn border d-lg-none' onClick={() => window.location.href = "/donation"}> <FaUser /> </button>
+            {userInfo && Object.keys(userInfo).length > 0 ?
+              <button className='btn border d-lg-none' onClick={() => window.location.href = "/donation"}> <FaUser /> </button>
+              : null}
             <button className='btn don_button d-lg-none' onClick={() => window.location.href = "/donation"}> Faire un don!</button>
           </div>
           <button className="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">

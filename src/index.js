@@ -4,9 +4,12 @@ import Router from './Router';
 import { RouterProvider } from "react-router-dom";
 import ReactGA from 'react-ga4';
 
+import "./styles.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+
+import '@fontsource/roboto'; // Defaults to 400 weight
 
 
 // Initialize Google Analytics

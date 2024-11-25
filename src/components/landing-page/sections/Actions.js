@@ -1,11 +1,14 @@
 import React from 'react'
 // import Pic2 from "../../../assets/actionsSolidaire/"
-import Ftour from "../../../assets/actionsSolidaire/ftour.jpeg"
+import Ftour from "../../../assets/ftour/ftour.jpeg"
+import Ftour1 from "../../../assets/ftour/ftour1.jpg"
+import Ftour2 from "../../../assets/ftour/ftour2.jpg"
+import Ftour3 from "../../../assets/ftour/ftour3.jpg"
 
 export default function Actions() {
 
   const action = [
-    { titre: "Les Ftours Bab Rayan", img: Ftour, desc: "L’association Bab Rayan organise chaque année depuis 2015 le Ftour Bab Rayan. Pendant ce mois sacré, la plupart n’ont pas la chance de rompre leur jeûne autour d’une table garnie. Cette action apporte beaucoup de convivialité et de chaleur à leur environnement ; l’esprit de solidarité du Ramadan est alors au rendez-vous, grâce à vos dons !" },
+    { titre: "Les Ftours Bab Rayan", img: [Ftour1, Ftour2, Ftour3], desc: "L’association Bab Rayan organise chaque année depuis 2015 le Ftour Bab Rayan. Pendant ce mois sacré, la plupart n’ont pas la chance de rompre leur jeûne autour d’une table garnie. Cette action apporte beaucoup de convivialité et de chaleur à leur environnement ; l’esprit de solidarité du Ramadan est alors au rendez-vous, grâce à vos dons !" },
 
   ]
   const actions = [
@@ -25,31 +28,31 @@ export default function Actions() {
           <div key={index} className="col-12 mb-4">
             <div className="card border-0" style={{ backgroundColor: "#003049" }}>
               <div className="row w-100">
-                <div className="col-6">
-                  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src={action.img} class="d-block w-100" alt="..." />
+                <div className="col-12  col-md-6  ">
+                  <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+                    <div className="carousel-inner">
+                      <div className="carousel-item active">
+                        <img src={action.img[0]} className="d-block w-100" style={{height : "400px" , objectFit : "cover"}} alt="..." />
                       </div>
-                      <div class="carousel-item">
-                        <img src={action.img} class="d-block w-100" alt="..." />
+                      <div className="carousel-item">
+                        <img src={action.img[1]} className="d-block w-100" style={{height : "400px" , objectFit : "cover"}} alt="..." />
                       </div>
-                      <div class="carousel-item">
-                        <img src={action.img} class="d-block w-100" alt="..." />
+                      <div className="carousel-item">
+                        <img src={action.img[2]} className="d-block w-100" style={{height : "400px" , objectFit : "cover"}} alt="..." />
                       </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
+                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                      <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span className="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
+                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                      <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span className="visually-hidden">Next</span>
                     </button>
                   </div>
 
                 </div>
-                <div className="col-6 my-auto"><div className="card-body">
+                <div className="col-12  col-md-6  my-auto"><div className="card-body">
                   <h2 style={{ color: "#c2aa79" }} className='text-center'>{action.titre} </h2>
                   <div style={{ color: "#EAE2B7" }}>{action.desc}</div>
                   <p className='text-center mt-4' style={{ cursor: "pointer", color: "#FCBF49" }}><u>Voir Plus</u></p>

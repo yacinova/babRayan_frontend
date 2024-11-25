@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import "./contact.css";
-import logo from "../../../assets/Logo.png";
+import { useInView } from 'react-intersection-observer';
 // import child1 from "../../../assets/cont.png";
 // import child2 from "../../../assets/cont.png";
 // import child3 from "../../../assets/cont.png";
@@ -38,6 +38,11 @@ const ContactPage = () => {
       [e.target.name]: e.target.value,
     });
   };
+  const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
+
+  useEffect(() => {
+    if (inView) controls.start('visible');
+  }, [controls, inView]);
 
   useEffect(() => {
     controls.start("visible");
@@ -47,13 +52,15 @@ const ContactPage = () => {
     <div className="contact-page">
 
       {/* Hero Section */}
-      <section className="hero-section">
+      <motion.div ref={ref} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
         <div className="hero-content">
-          <motion.h1 variants={fadeInUp} initial="hidden" animate={controls}>
-            Contact Us
-          </motion.h1>
+          <motion.div className="title" initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.8, duration: 0.8 }}>
+            <h1 className="hero-title">Nous Contacter</h1>
+            <div className="divider"></div>
+
+          </motion.div>
         </div>
-      </section>
+      </motion.div>
 
       {/* Main Content */}
       <div className="main-content">

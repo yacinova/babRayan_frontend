@@ -4,6 +4,7 @@ import Pic1 from "../../../assets/articles/1.png"
 import Pic2 from "../../../assets/articles/2.png"
 import Psg from "../../../assets/actualité/psg.jpg"
 import Diplome from "../../../assets/actualité/remiseDiplome.jpg"
+import Aiguebelle from "../../../assets/actualité/Aiguebelle.jpg"
 
 export default function Blogs() {
 
@@ -12,10 +13,9 @@ export default function Blogs() {
       id: 1,
       title: "Remise des diplômes de la deuxième promotion du CFI",
       image: Diplome,
-      text: `l'Association Bab Rayan a eu l'honneur de célébrer le 28 Octobre la réussite de la deuxième promotion de diplômés de son Centre de Formation et d'Insertion.<br />
-      Le CFI propose aux jeunes issus des établissements de protection sociale (EPS) et en situation de précarité une formation qualifiante dans les métiers de l’hôtellerie et de la restauration. Aujourd'hui, plus de 120 jeunes franchissent une étape clé vers l'emploi, grâce au soutien de nos entreprises partenaires.<br />
-      Ce diplôme, délivré en partenariat avec l'Entraide Nationale, témoigne de leur persévérance et marque le début d'une carrière prometteuse. <br />
-      Nous avons été honorés par la présence de personnalités de marque : le Wali de Casablanca, le Gouverneur des arrondissements de Casablanca-Anfa, Mme la Maire de Casablanca. Merci infiniment à nos partenaires et à la communauté Bab Rayan pour leur soutien indéfectible.`
+      text: `l'Association Bab Rayan a eu l'honneur de célébrer ce 28 Octobre 2024, la réussite de la deuxième promotion de diplômés de son Centre de Formation et d'Insertion.<br />
+      Le CFI propose aux jeunes issus des EPS et en situation de précarité une formation qualifiante dans les métiers de l’hôtellerie et de la restauration. Aujourd'hui, plus de 120 jeunes franchissent une étape clé vers l'emploi, grâce au soutien de nos entreprises partenaires.<br />
+      Nous avons été honorés par la présence de Mr le Wali, le Gouverneur et Mme la Maire de Casablanca.`
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ export default function Blogs() {
     {
       id: 3,
       title: "Aiguebelle : Un partenaire engagé avec nos jeunes du CFI",
-      image: Pic1,
+      image: Aiguebelle ,
       text: `Notre partenaire Aiguebelle a généreusement organisé cet automne, une journée de visite et de formation en chocolaterie pour les jeunes du Centre de Formation et d’Insertion (CFI) de Bab Rayan.<br />
       Nos étudiants ont eu l'opportunité unique de découvrir les secrets de la fabrication du chocolat, tout en explorant le fonctionnement de l'usine. Cette expérience immersive a enrichi leurs connaissances et stimulé leur passion pour l’art culinaire.`
     },
@@ -41,7 +41,7 @@ export default function Blogs() {
     },
     {
       id: 5,
-      title: "Cérémonie d’ouverture de PSG Academy en présence des enfants de Bab Rayan",
+      title: "Cérémonie d’ouverture de PSG Academy",
       image: Psg,
       text: `La cérémonie d’ouverture de la PSG Academy Maroc s’est tenue le 11 novembre à Casablanca, en présence des membres de la PSG Academy et de Tamaris Foot and Paddle.<br />
       Nos jeunes de Bab Rayan ont eu l’immense privilège de rencontrer Achraf Hakimi, l’invité d’honneur de cet événement inoubliable… et même de jouer un match contre lui ! <br />
