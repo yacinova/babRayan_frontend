@@ -192,7 +192,8 @@
 
 /* Image Styling */
 .gouvernance-page .gen-image-container img {
-  width: 100%;
+  width: 600px;
+  height:250px;
   max-width: 500px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
