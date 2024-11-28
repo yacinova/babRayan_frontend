@@ -10,7 +10,7 @@ export default function Navbar() {
   const [userInfo, setUserInfo] = useState({});
 
   const fetchUser = async () => {
-    const response = await fetch(`http://localhost:7777/api/users/${userId}`);
+    const response = await fetch(`http://127.0.0.1:5001/babrayanlocal/us-central1/api/users/${userId}`);
     const data = await response.json();
     if (data.status) {
       setUserInfo(data.data);

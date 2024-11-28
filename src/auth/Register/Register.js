@@ -36,7 +36,7 @@ export default function Register() {
       return;
     }
 
-    const response = await fetch('http://localhost:7777/api/auth/register', {
+    const response = await fetch('http://127.0.0.1:5001/babrayanlocal/us-central1/api/auth/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ export default function Register() {
   const VerifCode = async (event) => {
     event.preventDefault();
 
-    const response = await fetch('http://localhost:7777/api/auth/verify_email', {
+    const response = await fetch('http://127.0.0.1:5001/babrayanlocal/us-central1/api/auth/verify_email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

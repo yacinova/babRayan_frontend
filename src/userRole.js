@@ -7,7 +7,7 @@ const useUserRole = (Id) => {
   useEffect(() => {
     const fetchUserProfile = async () => {
       try {
-        const response = await fetch(`http://localhost:7777/api/users/${Id}`, {
+        const response = await fetch(`http://127.0.0.1:5001/babrayanlocal/us-central1/api/users/${Id}`, {
           method: 'GET',
         });
         const data = await response.json();

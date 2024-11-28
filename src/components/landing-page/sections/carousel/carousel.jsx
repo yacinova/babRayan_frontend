@@ -11,7 +11,7 @@ export default function CustomCarousel() {
 
     {
       image: Pic3,
-      title: "Chaque enfant mérite un bon départ dans la vie",
+      title: "Changer le parcours d’une vie",
       description: "L’association Bab Rayan agit depuis 2014 pour transformer la vie des enfants en difficulté. ",
     },
     {

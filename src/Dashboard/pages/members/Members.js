@@ -30,7 +30,7 @@ export default function Members() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:7777/api/members", {
+      const res = await fetch("http://127.0.0.1:5001/babrayanlocal/us-central1/api/members", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -62,7 +62,7 @@ export default function Members() {
   // Fetch members
   const fetchMembers = async () => {
     try {
-      const res = await fetch("http://localhost:7777/api/members")
+      const res = await fetch("http://127.0.0.1:5001/babrayanlocal/us-central1/api/members")
       const data = await res.json();
       setMembers(data.data);
       setFilteredMembers(data.data);
@@ -99,7 +99,7 @@ export default function Members() {
 
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`http://localhost:7777/api/members/${id}`, {
+      const res = await fetch(`http://127.0.0.1:5001/babrayanlocal/us-central1/api/members/${id}`, {
         method: "DELETE",
       });
       

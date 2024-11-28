@@ -5,6 +5,7 @@ import Pic2 from "../../../assets/articles/2.png"
 import Psg from "../../../assets/actualité/psg.jpg"
 import Diplome from "../../../assets/actualité/remiseDiplome.jpg"
 import Aiguebelle from "../../../assets/actualité/Aiguebelle.jpg"
+import Theatre from "../../../assets/actualité/Theatre.jpg"
 
 export default function Blogs() {
 
@@ -34,7 +35,7 @@ export default function Blogs() {
     {
       id: 4,
       title: "Une sortie au théâtre pour voir le petit prince",
-      image: Pic2,
+      image: Theatre,
       text: `Les enfants de Bab Rayan ont assisté au premier spectacle de la saison de l’École du Jeune Spectateur : Le Petit Prince. <br />
       Grâce à la générosité de la Fondation Achraf Hakimi, nos jeunes ont été accueillis au Complexe Culturel Al Hassani, où ils ont plongé dans l'univers magique de cette œuvre intemporelle. <br />
       Un grand merci à nos partenaires pour offrir à ces enfants de précieux moments de théâtre.`
