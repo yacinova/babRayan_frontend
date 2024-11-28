@@ -2,17 +2,86 @@ import React, { useRef } from "react";
 import "animate.css";
 import { motion } from "framer-motion";
 import "./gouvernance.css";
+import { Collapse } from "antd";
 import reporti from "../../../assets/gouvernance/report.jpg";
 import pic1 from "../../../assets/gouvernance/gen.jpg";
 import pic2 from "../../../assets/gouvernance/pic3.jpg";
-import pic3 from "../../../assets/gouvernance/pic4.jpg";
+import pic3 from "../../../assets/indh.png";
 
-import Lalami from "../../../assets/members/lalami.jpeg"
-import Abdelmoula from "../../../assets/members/Abdelmoula.jpeg"
-import Mouji from "../../../assets/members/Mouji.jpeg"
+import Lalami from "../../../assets/members/lalami.jpeg";
+import Abdelmoula from "../../../assets/members/Abdelmoula.jpeg";
+import Mouji from "../../../assets/members/Mouji.jpeg";
 
+const items = [
+  {
+    key: "1",
+    label: "Conseil d'administration",
+    children: (
+      <div className="imgp">
+        <img 
+          src={pic2} 
+          alt="Conseil d'administration" 
+          
+        />
+        <p >
+          Le Conseil d'administration est l'instance décisionnaire. Il se réunit
+          au moins quatre fois par an. Son rôle consiste à adopter le
+          fonctionnement, déterminer la politique générale et suivre les
+          orientations stratégiques. Il est composé de membres administrateurs.
+        </p>
+      </div>
+    ),
+  },
+  {
+    key: "2",
+    label: "Direction Générale",
+    children: (
+      <div className="imgp">
+        <img 
+          src={pic3} 
+          alt="Direction Générale" 
+        />
+        <p >
+          La Direction Générale gère les établissements et services sous
+          l'autorité du Représentant de l'État. Elle assure une fonction
+          stratégique dans la gestion des affaires, en lien avec le Conseil
+          d'Administration et l'association, ainsi que le contexte économique,
+          politique et scientifique.
+        </p>
+      </div>
+    ),
+  },
+  {
+    key: "3",
+    label: "Partenaires institutionnels",
+    children: (
+      <div className="imgp">
+        <img 
+          src={pic2} 
+          alt="Partenaires institutionnels" 
+        />
+        <p>
+          INDH (Initiative Nationale pour les Droits de l'Homme) Wilaya Grand
+          Casablanca AREF Grand Casablanca (Académie Régional de l'Enseignement
+          et de la Formation) Entraide Nationale Casa Anfa
+        </p>
+      </div>
+    ),
+  },
+];
+
+
+//
 const Gouvernance = () => {
   const ref = useRef(null);
+
+  // const { token } = theme.useToken();
+  // const items = {
+  //   marginBottom: 24,
+  //   background: token.colorFillAlter,
+  //   borderRadius: token.borderRadiusLG,
+  //   border: 'none',
+  // };
 
   const members = [
     {
@@ -81,6 +150,48 @@ const Gouvernance = () => {
       description:
         "Compte rendu global des activités de l'Association Bab Rayan",
     },
+    {
+      id: 4,
+      year: "2019",
+      image: reporti,
+      description:
+        "Compte rendu global des activités de l'Association Bab Rayan",
+    },
+    {
+      id: 5,
+      year: "2020",
+      image: reporti,
+      description:
+        "Compte rendu global des activités de l'Association Bab Rayan",
+    },
+    {
+      id: 6,
+      year: "2021",
+      image: reporti,
+      description:
+        "Compte rendu global des activités de l'Association Bab Rayan",
+    },
+    {
+      id: 7,
+      year: "2022",
+      image: reporti,
+      description:
+        "Compte rendu global des activités de l'Association Bab Rayan",
+    },
+    {
+      id: 8,
+      year: "2023",
+      image: reporti,
+      description:
+        "Compte rendu global des activités de l'Association Bab Rayan",
+    },
+    {
+      id: 9,
+      year: "2024",
+      image: reporti,
+      description:
+        "Compte rendu global des activités de l'Association Bab Rayan",
+    },
   ];
 
   return (
@@ -105,9 +216,9 @@ const Gouvernance = () => {
         </div>
       </motion.div>
 
-      <div className="row w-100  d-flex justify-content-center align-items-center">
-        <div className="text-container col-12 col-md-6 ">
-          <h1 className="title">
+      <div className="container-content">
+        <div className="text-container">
+          <h1 className="title-cont">
             "Engagés et unis autour d’un même espoir : un projet holistique pour
             chaque enfant accueilli par Bab Rayan"
           </h1>
@@ -122,8 +233,8 @@ const Gouvernance = () => {
             les moyens de se redécouvrir, de reprendre confiance en eux et de
             construire un avenir prometteur. »{" "}
           </p>
-        </div >
-        <div className="image-container col-12 col-md-6 ">
+        </div>
+        <div className="image-container">
           <img src={pic1} alt="Bab Rayan" className="image" />
         </div>
       </div>
@@ -146,8 +257,7 @@ const Gouvernance = () => {
         </div>
       </div>
 
-      <div className="gouvernance-page">
-        {/* Board of Directors Section */}
+      {/* <div className="middle-page">
         <section className="section-container">
           <div className="image-text-wrapper">
             <div className="gen-image-container">
@@ -166,7 +276,6 @@ const Gouvernance = () => {
           </div>
         </section>
 
-        {/* General Management Section */}
         <section className="section-container">
           <div className="image-text-wrapper reverse">
             <div className="gen-image-container">
@@ -201,17 +310,44 @@ const Gouvernance = () => {
           </div>
         </section>
 
-      </div>
+      </div> */}
+
+      {/* <Collapse defaultActiveKey={["1"]} ghost items={items} /> */}
+      <Collapse 
+      defaultActiveKey={["1"]} 
+      accordion
+      // size="large"
+      className="organizational-collapse"
+    >
+      {items.map((item) => (
+        <Collapse.Panel 
+          header={item.label} 
+          key={item.key}
+        >
+          {item.children}
+        </Collapse.Panel>
+      ))}
+    </Collapse>
+
+      {/* <Collapse
+      bordered={false}
+      defaultActiveKey={['1']}
+      expandIcon={({ isActive }) => <CaretRightOutlined rotate={isActive ? 90 : 0} />}
+      style={{
+        background: token.colorBgContainer,
+      }}
+      items={getItems(panelStyle)}
+    /> */}
 
       <div className="report-container">
-        <div className="section-title">
+        <div className="section-title ">
           <p className="collaboration-text">Collaborations à livres ouverts</p>
           <h2 className="main-title">Transparence financière</h2>
         </div>
 
-        <div className="row report-con">
+        <div className="report-con">
           {reports.map((report) => (
-            <div key={report.id} className="col-md-4 report-card">
+            <div key={report.id}>
               <div className="rep-image-container">
                 <img
                   src={report.image}
@@ -220,15 +356,9 @@ const Gouvernance = () => {
                 />
               </div>
 
-              <h3 className="report-title">
-                Rapport Annuel {report.year}
-              </h3>
-              <p className="report-description">
-                {report.description}
-              </p>
-              <button className="btn download-btn">
-                TÉLÉCHARGER PDF
-              </button>
+              <h3 className="report-title">Rapport Annuel {report.year}</h3>
+              <p className="report-description">{report.description}</p>
+              <button className="btn download-btn">TÉLÉCHARGER PDF</button>
             </div>
           ))}
         </div>

@@ -1,3 +1,32 @@
+/* Hero Section */
+.container .hero-section {
+  position: relative;
+  height: 17rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-red);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+.container .title {
+  color: #003049;
+}
+.container .hero-content {
+  position: relative;
+  z-index: 2;
+  padding: var(--spacing-base);
+}
+
+.container .hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-top: var(--spacing-base);
+}
+
 /* * {
     box-sizing: border-box;
     margin: 0;

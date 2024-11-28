@@ -85,7 +85,7 @@ export default function Navbar() {
     {
       key: '2',
       label: (
-        <a href="#">Protection de l'enfance</a>
+        <a href="/protection">Protection de l'enfance</a>
       ),
       style: { color: '#003049', fontSize: '15px' },
     },
