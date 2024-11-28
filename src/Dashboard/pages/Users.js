@@ -11,7 +11,7 @@ export default function Users() {
     ]);
 
     useEffect(() => {
-        fetch(`http://localhost:7777/api/users/`)
+        fetch(`http://127.0.0.1:5001/babrayanlocal/us-central1/api/users/`)
             .then(response => response.json())
             .then(data => {
                 setUsers(data.data);

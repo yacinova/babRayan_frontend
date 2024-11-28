@@ -35,7 +35,7 @@ export default function Settings() {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const response = await fetch(`http://localhost:7777/api/users/${userId}`);
+                const response = await fetch(`http://127.0.0.1:5001/babrayanlocal/us-central1/api/users/${userId}`);
                 const data = await response.json();
                 setUserData(data.data);
                 setFormData({
@@ -65,7 +65,7 @@ export default function Settings() {
 
     const handleSaveChanges = async () => {
         try {
-            const response = await fetch(`http://localhost:7777/api/users/${userId}`, {
+            const response = await fetch(`http://127.0.0.1:5001/babrayanlocal/us-central1/api/users/${userId}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"

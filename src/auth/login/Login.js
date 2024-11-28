@@ -23,7 +23,7 @@ export default function Login() {
   const handleLogin = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch('http://localhost:7777/api/auth/login', {
+      const response = await fetch('http://127.0.0.1:5001/babrayanlocal/us-central1/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -80,6 +80,9 @@
   border: #003049 2px solid;
   opacity: 1;
 }
+.actions h3{
+  color: #003049;
+}
 
 
 
@@ -103,6 +106,9 @@
   margin: auto;
   border: #003049 2px solid;
   opacity: 1;
+}
+.blogs h3{
+  color: #003049;
 }
 
 .blogs button:hover {
