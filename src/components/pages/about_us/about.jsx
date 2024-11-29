@@ -226,6 +226,69 @@ const AboutUs = () => {
         </div>
       </motion.div>
 
+      {/* mot de presedente */}
+
+      <div className="intro-section">
+        <motion.h2 
+          className="section-title"
+          variants={fadeInUp}
+        >
+          Un Message de Compassion et d'Action
+        </motion.h2>
+        <motion.p 
+          className="intro-text"
+          variants={fadeInUp}
+        >
+          En tant que présidente, je suis honorée de partager notre vision et notre engagement envers un avenir meilleur. Chaque action compte, et ensemble, nous pouvons transformer des vies.
+        </motion.p>
+      </div>
+
+      {/* President Section */}
+      <div className="president-section">
+        <motion.div 
+          // ref={ref}
+          animate={controls}
+          variants={staggerChildren}
+          className="president-grid"
+        >
+          {/* Image Column */}
+          <motion.div 
+            variants={fadeInUp}
+            className="president-image-container"
+          >
+            <div className="image-wrapper">
+              <img 
+                src=''
+                alt="FATIMA ZAHRA HAMROUDI RATIBE" 
+                className="president-image"
+              />
+              <div className="image-overlay"></div>
+            </div>
+            <div className="decorative-circle decorative-circle-red"></div>
+            <div className="decorative-circle decorative-circle-blue"></div>
+          </motion.div>
+
+          {/* Content Column */}
+          <motion.div variants={fadeInUp} className="president-content">
+            <h2 className="president-name">FATIMA ZAHRA HAMROUDI RATIBE</h2>
+            <h3 className="president-title">Fondatrice PRÉSIDENTE</h3>
+            <div className="president-bio">
+              <p>
+                Œuvrant depuis plus de 15 ans dans le domaine de l'aide humanitaire, engagée dans le milieu associatif local depuis son plus jeune âge, la présidente de notre association fut, avant d'être élue présidente nationale en mai 2019, une grande bénévole et membre.
+              </p>
+              <p>
+                Attachée à une bonne gouvernance et à une gestion saine et transparente, elle mène la vie associative de BAB RAYAN d'une main de maître. En phase avec les réalités du terrain qu'elle n'a cessé d'arpenter au cours de sa carrière.
+              </p>
+            </div>
+            <motion.div className="cta-container">
+              <button className="cta-button">
+                Apprendre Plus
+              </button>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      </div>
+
       {/* Mission & Vision Tabs Section */}
       <section className="mission-vision-section">
         <div className="container">
@@ -316,7 +379,7 @@ const AboutUs = () => {
       </section>
 
       {/* Enhanced Team Section */}
-      <section className="team-section">
+      {/* <section className="team-section">
         <div className="container">
           <motion.h2
             className="section-title"
@@ -345,7 +408,7 @@ const AboutUs = () => {
                   <div className="member-expertise">
                     {/* {member.expertise.map((skill, idx) => (
                       <span key={idx} className="expertise-tag">{skill}</span>
-                    ))} */}
+                    ))} 
                   </div>
                   <div className="member-social">
                     <a href={member.social.linkedin} aria-label="LinkedIn">
@@ -360,10 +423,10 @@ const AboutUs = () => {
             ))}
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Timeline Section */}
-      <section className="timeline-section">
+      {/* <section className="timeline-section">
         <div className="container">
           <motion.h2
             className="section-title"
@@ -383,10 +446,10 @@ const AboutUs = () => {
             {milestones.map((milestone, index) => (
               <motion.div key={index} className="timeline-item" variants={fadeInUp}>
                 {/* {index !== milestones.length - 1 ? ( */}
-                <div className="timeline-marker"></div>
-                {/* ) : (
+                  {/* <div className="timeline-marker"></div>
+               ) : (
                    <div className="timeline-marker last"></div>
-               )} */}
+               )} 
                 <div className="timeline-content">
                   <span className="timeline-year">{milestone.year}</span>
                   <h3 className="timeline-title">{milestone.text}</h3>
@@ -395,7 +458,7 @@ const AboutUs = () => {
             ))}
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Achievements Section */}
       <section className="achievements-section">

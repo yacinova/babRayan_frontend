@@ -1,5 +1,10 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 .about-us {
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  /* font-family: "Helvetica Neue", Arial, sans-serif; */
   color: #333;
   line-height: 1.6;
 }
@@ -61,8 +66,9 @@
 }
 
 .vision-points {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
 }
 
@@ -70,18 +76,23 @@
   background-color: white;
   padding: 10px;
   margin: 10px;
+  width: 300px;
   border-bottom: 5px solid #D62828;
   border-radius: 5px;
 }
 
 .mission-pillars {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
   gap: 30px;
 }
 
 .pillar {
   background-color: white;
+  width: 250px;
   padding: 10px;
   margin: 10px;
   border-bottom: 5px solid #D62828;
@@ -163,6 +174,7 @@
 }
 
 .achievements-section {
+  justify-content: center;
   padding: 60px 20px;
 }
 
@@ -187,7 +199,7 @@
 
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
   gap: 20px;
 }
 

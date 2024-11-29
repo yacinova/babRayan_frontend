@@ -48,16 +48,16 @@ export default function Navbar() {
       style: { color: '#003049', fontSize: '15px' },
 
     },
+    // {
+    //   key: '2',
+    //   label: (
+    //     <a href="/mot_presidente">Mot de la Présidente</a>
+    //   ),
+    //   style: { color: '#003049', fontSize: '15px' },
+
+    // },
     {
       key: '2',
-      label: (
-        <a href="/mot_presidente">Mot de la Présidente</a>
-      ),
-      style: { color: '#003049', fontSize: '15px' },
-
-    },
-    {
-      key: '3',
       label: (
         <a href="/gouvernance">Gouvernance</a>
       ),
@@ -65,7 +65,7 @@ export default function Navbar() {
 
     },
     {
-      key: '4',
+      key: '3',
       label: (
         <a href="/chiffres">Dates et Chiffres clés</a>
       ),

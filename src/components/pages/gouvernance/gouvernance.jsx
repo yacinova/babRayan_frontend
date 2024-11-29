@@ -194,6 +194,34 @@ const Gouvernance = () => {
     },
   ];
 
+  const actions = [
+    {
+      titre: "Conseil d'administration", 
+    //   img: Ftour,
+      desc: ` Le Conseil d'administration est l'instance décisionnaire. Il se réunit
+          au moins quatre fois par an. Son rôle consiste à adopter le
+          fonctionnement, déterminer la politique générale et suivre les
+          orientations stratégiques. Il est composé de membres administrateurs.
+   `
+         },
+    {
+      titre: "Direction Générale",
+    //    img: Ftour,
+      desc: ` La Direction Générale gère les établissements et services sous
+          l'autorité du Représentant de l'État. Elle assure une fonction
+          stratégique dans la gestion des affaires, en lien avec le Conseil
+          d'Administration et l'association, ainsi que le contexte économique,
+          politique et scientifique.`
+     },
+    {
+      titre: "Partenaires institutionnels", 
+    //   img: Ftour,
+      desc: `     INDH (Initiative Nationale pour les Droits de l'Homme) Wilaya Grand
+          Casablanca AREF Grand Casablanca (Académie Régional de l'Enseignement
+          et de la Formation) Entraide Nationale Casa Anfa`    },
+
+  ]
+
   return (
     <div className="general-page">
       {/* Hero Section */}
@@ -313,7 +341,7 @@ const Gouvernance = () => {
       </div> */}
 
       {/* <Collapse defaultActiveKey={["1"]} ghost items={items} /> */}
-      <Collapse 
+      {/* <Collapse 
       defaultActiveKey={["1"]} 
       accordion
       // size="large"
@@ -327,7 +355,7 @@ const Gouvernance = () => {
           {item.children}
         </Collapse.Panel>
       ))}
-    </Collapse>
+    </Collapse> */}
 
       {/* <Collapse
       bordered={false}
@@ -340,7 +368,7 @@ const Gouvernance = () => {
     /> */}
 
       <div className="report-container">
-        <div className="section-title ">
+        <div  className="section-title ">
           <p className="collaboration-text">Collaborations à livres ouverts</p>
           <h2 className="main-title">Transparence financière</h2>
         </div>
@@ -362,6 +390,24 @@ const Gouvernance = () => {
             </div>
           ))}
         </div>
+      </div>
+ <hr />
+      <div className="rubrique">
+      {actions.map((action, index) => (
+          <div key={index} className="col-12 mb-2 col-md-6 col-lg-4 w-25 p-3">
+            <div className="card h-100 border-0" style={{ backgroundColor: "#003049" }}>
+              {/* <div className="p-2 card-hedader">
+                <img src={action.img} alt="ftour" className="img-fluid roudndeed" />
+              </div> */}
+              <div className="card-body">
+                <h2 style={{ color: "#c2aa79" }} className='text-center'>{action.titre} </h2>
+                <hr style={{ color: "#c2aa79" }} />
+                <div style={{ color: "#EAE2B7" }}>{action.desc}</div>
+                {/* <p className='text-center mt-4' style={{ cursor: "pointer", color: "#FCBF49" }}><u>Voir Plus</u></p> */}
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
     // </div>

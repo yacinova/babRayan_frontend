@@ -1,10 +1,36 @@
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
+import { Statistic } from "antd";
+import CountUp from "react-countup";
 import "./ProtectionEnfance.css";
+import image1 from "../../../assets/foyer/foyer-bab.jpg";
+import image2 from "../../../assets/3rubrique/foyer.jpg";
+// import { Weight } from "lucide-react";
 
 const ProtectionEnfance = () => {
   const ref = useRef(null);
+  const formatter = (value) => (
+    <CountUp end={value} separator="," duration={8} />
+  );
 
+  const chiffres = [
+    {
+      label: "Enfants pris en charge",
+      value: 105,
+      icon: <i className="fa-solid fa-child"></i>,
+    },
+    // { label: 'enfants', value: 105, icon: <i className="fa-solid fa-hand-holding-heart"></i> },
+    {
+      label: "encadrants",
+      value: 16,
+      icon: <i className="fa-solid fa-house-user"></i>,
+    },
+    {
+      label: "bénévoles<",
+      value: 1300,
+      icon: <i className="fa-solid fa-boxes-stacked"></i>,
+    },
+  ];
   return (
     <div className="container">
       {/* Hero Section */}
@@ -40,23 +66,29 @@ const ProtectionEnfance = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <h1>Protection de l’Enfance</h1>
-            <p>
-              Depuis 2014, Bab rayan se consacre à la protection de l’enfance,
-              assurant un environnement sûr et bienveillant pour les enfants
-              vulnérables. Chaque jour, l’association défend leurs droits et
-              leur garantit un accès à une éducation de qualité, ouvrant ainsi
-              la voie à un avenir plus prometteur.
-            </p>
-            <p>
-              Bab Rayan place la protection de l'enfance au cœur de sa mission.
-              Son objectif : offrir à ces enfants un cadre de vie sécurisant,
-              tout en restaurant leur confiance grâce à un soutien matériel et
-              humain continu. En leur redonnant une part de leur insouciance et
-              en les accompagnant vers la réalisation de leurs rêves — avoir un
-              foyer et accéder à l'éducation — l'association leur permet de se
-              projeter vers un avenir meilleur.
-            </p>
+            {/* <h1>Protection de l’Enfance</h1> */}
+            <div className="protection-enfance">
+              <p style={{textAlign:"center", padding:"10px"}}>
+                Depuis 2014, Bab rayan se consacre à la protection de l’enfance,
+                assurant un environnement sûr et bienveillant pour les enfants
+                vulnérables. Chaque jour, l’association défend leurs droits et
+                leur garantit un accès à une éducation de qualité, ouvrant ainsi
+                la voie à un avenir plus prometteur.
+              </p>
+              <img src={image1} alt="Bab Rayan" />
+              {/* </div> */}
+              <p>
+                Bab Rayan place la protection de l'enfance au cœur de sa
+                mission. Son objectif : offrir à ces enfants un cadre de vie
+                sécurisant, tout en restaurant leur confiance grâce à un soutien
+                matériel et humain continu. En leur redonnant une part de leur
+                insouciance et en les accompagnant vers la réalisation de leurs
+                rêves — avoir un foyer et accéder à l'éducation — l'association
+                leur permet de se projeter vers un avenir meilleur.
+              </p>
+              {/* /<div className="image-container"> */}
+      
+            </div>
           </motion.section>
 
           <motion.section
@@ -65,22 +97,47 @@ const ProtectionEnfance = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            <h2>Foyer Bab Rayan</h2>
+            <div className="foyer-bab-rayan"> 
+            <h2 style={{textAlign:"center", padding:"10px"}}>Foyer Bab Rayan</h2>
 
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <h3>Structure</h3>
+              {/* <h3>Structure</h3> */}
               <p>
                 Le Foyer Bab Rayan est un établissement de protection sociale
                 (EPS) agréé et sous la tutelle du Ministère de la Solidarité, de
                 l’Insertion Sociale et de la Famille.
               </p>
+              <p>
+                {" "}
+                Le premier pavillon du Foyer Bab Rayan a ouvert ses portes en
+                septembre 2015 et est habilité à accueillir des enfants
+                orphelins, abandonnés, en situation difficile ou maltraités à
+                partir de 3 ans jusqu’à l’âge de 18 ans, souvent envoyés par
+                d'autres organisations.
+              </p>
+              <p>
+                {" "}
+                Il se situe au quartier palmier à Casablanca, dans un
+                établissement ayant servi avant sa fermeture d’école primaire
+                publique. Cet établissement a été mis à la disposition de
+                l’association Bab Rayan dans le cadre d’un partenariat avec
+                l’AREF (Académie Régionale de l'Education et de la Formation)
+                Casablanca et la Wilaya de Casa-Settat.
+              </p>
+              <p>
+                Au sein du foyer, nous avons aménagé des espaces propices à
+                garantir un cadre de vie empreint de dignité. Ces espaces, à la
+                fois spacieux et offrant des services de haute qualité, sont
+                conçus en harmonie avec nos valeurs et nos coutumes.
+              </p>
             </motion.div>
-
-            <h3>Projet de Vie</h3>
+            </div>
+            <div className="projet-vie">
+            <h3 style={{textAlign:"center", padding:"10px"}}>Projet de Vie</h3>
             <motion.ul
               className="foyer-list"
               initial={{ opacity: 0 }}
@@ -102,7 +159,8 @@ const ProtectionEnfance = () => {
                 <strong>plan d’insertion sociale</strong> personnalisé.
               </li>
             </motion.ul>
-
+            
+            </div>
             <h3>Humaniser le Projet</h3>
             <p>
               pour renforcer l'impact de notre mission, nous intégrons des{" "}
@@ -112,8 +170,9 @@ const ProtectionEnfance = () => {
               ...
             </p>
 
-            <h3>Le Foyer en Chiffres</h3>
-            <motion.ul
+            <div className="foyer">
+              <h3 style={{textAlign:"center", padding:"10px"}}>Le Foyer en Chiffres</h3>
+              {/* <motion.ul
               className="stats"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -129,7 +188,38 @@ const ProtectionEnfance = () => {
               <li>
                 <strong>1300 bénévoles</strong> impliqués
               </li>
-            </motion.ul>
+            </motion.ul> */}
+              <motion.div className="stat-container">
+                {chiffres.map((stat, index) => (
+                  <div key={index} className="stat-item text-center">
+                    <span style={{ color: "#003049", fontSize: "50px" }}>
+                      {stat.icon}
+                    </span>
+                    <br />
+                    <div className="d-flex justify-content-center">
+                      <span
+                        className="me-1 fw-bold"
+                        style={{ color: "#003049", fontSize: "30px" }}
+                      >
+                        +
+                      </span>
+                      <Statistic
+                        className="fw-bold stat-value"
+                        valueStyle={{ color: "#003049", fontSize: "30px" }}
+                        value={stat.value}
+                        formatter={formatter}
+                      />
+                    </div>
+                    <span className="text-secondary">{stat.label}</span>
+                  </div>
+                ))}
+              </motion.div>
+              <div className="pic-foyer">
+                <img src={image2} alt="" />
+                <img src={image2} alt="" />
+                <img src={image2} alt="" />
+              </div>
+            </div>
           </motion.section>
         </motion.div>
       </div>

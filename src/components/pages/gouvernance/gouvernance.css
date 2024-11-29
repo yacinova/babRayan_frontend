@@ -168,9 +168,9 @@
 
 /* coolapse */
 
-.organizational-collapse{
+ /* .organizational-collapse{
   font-size: 2rem;
-  /* font-weight: bold; */
+  /* font-weight: bold; *
   padding: 50px;
   align-items: center;
   gap: 20px;
@@ -187,7 +187,7 @@
   width: 400px;
   height: 250px;
   max-width: 100%;
-  /* margin: 0 auto; */
+  /* margin: 0 auto; *
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
@@ -203,10 +203,10 @@
   color: #333;
   line-height: 1.6;
   margin: 0;
-}
+} */
 
 /* Responsive design */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .organizational-collapse{
     flex-direction: column;
     text-align: center;
@@ -214,16 +214,16 @@
   }
   .organizational-collapse p {
     font-size: 1rem;
-    /* color: #333; */
-  }
+     color: #333; 
+  } */
   
 
-  .imgp{
+  /* .imgp{
 flex-wrap: wrap;
-}
+} 
 }
 /* mooodle */
-.middle-page .section-container {
+/* .middle-page .section-container {
   margin-bottom: 60px;
 }
 
@@ -292,10 +292,11 @@ flex-wrap: wrap;
   .middle-page .text-container p {
     font-size: 1em;
   }
-}
+} */
 /* pdf download part */
 
 .section-title {
+  /* justify-content: center; */
   text-align: center;
   padding-top: 3rem;
   margin-bottom: 3rem;
@@ -364,4 +365,14 @@ flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
   padding:40px 0;
+}
+
+
+.rubrique{
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
 }
