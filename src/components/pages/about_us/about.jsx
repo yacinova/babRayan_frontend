@@ -246,7 +246,6 @@ const AboutUs = () => {
       {/* President Section */}
       <div className="president-section">
         <motion.div 
-          // ref={ref}
           animate={controls}
           variants={staggerChildren}
           className="president-grid"
