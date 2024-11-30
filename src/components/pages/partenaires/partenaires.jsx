@@ -6,9 +6,6 @@ import indh from '../../../assets/indh.png';
 const PartnerList = () => {
   const partners = [
     { src: indh, alt: 'Partner 1' },
-    // { src: indh, alt: 'Partner 2' },
-    // { src: indh, alt: 'Partner 3' },
-    // { src: indh, alt: 'Partner 4' },
   ];
 
   return (

@@ -1,6 +1,5 @@
-/* Register.css */
 .register-container {
-  min-height: calc(100vh - 64px); /* Ajustez 64px selon la hauteur de votre navbar */
+  min-height: calc(100vh - 64px); 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,7 +9,6 @@
   overflow: hidden;
 }
 
-/* Animations d'arrière-plan spécifiques à l'inscription */
 .register-background {
   position: absolute;
   top: 0;
@@ -48,7 +46,6 @@
   50% { transform: translate(-20px, 20px) rotate(180deg); }
 }
 
-/* Carte d'inscription */
 .register-card {
   background: white;
   border-radius: 1rem;
@@ -73,7 +70,6 @@
   }
 }
 
-/* Section informative */
 .register-features {
   background: #003049;
   padding: 2rem;
@@ -97,7 +93,6 @@
   to { transform: translateX(0); opacity: 1; }
 }
 
-/* Section formulaire */
 .register-form-section {
   padding: 2rem;
   width: 55%;
@@ -155,7 +150,6 @@
   transform: translateY(-2px);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .register-card {
     flex-direction: column;

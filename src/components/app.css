@@ -11,18 +11,17 @@
   border-radius: 10px;
   cursor: pointer;
   animation: don_icon 2s infinite;
-  z-index: 3; /* Ensure the button is above other elements */
-  transition: background-color 0.3s; /* Smooth transition for hover effects */
+  z-index: 3; 
+  transition: background-color 0.3s; 
 }
 
-/* Change the background color for visibility */
 .red_color {
   color: white;
-  background-color: #D62828; /* Original background color */
+  background-color: #D62828; 
 }
 
 .red_color:hover {
-  background-color: #C72C2C; /* Slightly darker on hover for effect */
+  background-color: #C72C2C;
 }
 
 /* Responsive adjustments */

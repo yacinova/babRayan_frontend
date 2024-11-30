@@ -4,8 +4,8 @@
     position: relative;
     overflow: hidden;
     border-radius: 8px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Increased shadow for more height */
-    transition: box-shadow 0.3s ease-in-out; /* Smooth transition for shadow */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease-in-out; 
 }
 
 .rubriques .img-container {
@@ -25,11 +25,11 @@
     bottom: 0;
     width: 100%;
     text-align: center;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.781) 60%, transparent); /* Extended gradient height */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.781) 60%, transparent);
     color: #eae2b7;
     font-weight: bolder;
     padding: 10px;
-    transition: opacity 0.3s ease, background 0.3s ease; /* Smooth transition for opacity and background */
+    transition: opacity 0.3s ease, background 0.3s ease; 
 }
 
 .rubriques .overlay-text {
@@ -49,10 +49,9 @@
 }
 
 .rubriques .img-container:hover .overlay-text {
-    bottom: 0; /* Show overlay text from the bottom on hover */
+    bottom: 0;
 }
 
-/* Button Styles */
 .rubriques .btn {
     margin-top: 10px;
     color: #003049;
@@ -61,7 +60,7 @@
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition for button hover effect */
+    transition: background-color 0.3s ease; 
 }
 
 .rubriques .btn:hover {

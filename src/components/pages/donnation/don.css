@@ -83,13 +83,10 @@
 
 /* Main Form */
 .donation-form {
-  /* background-color: white; */
-  /* opacity: 0.9; */
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: 24px;
   max-width: 300px;
-  /* margin: 0 auto; */
   z-index: 9999;
   margin-top: 10px;
 
@@ -186,13 +183,7 @@
   margin-bottom: 16px;
 }
 
-/* Comment Section */
-/* .comment-section {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 24px;
-} */
+
 
 /* Next Button */
 .next-button {
@@ -369,45 +360,6 @@ select:focus {
   }
 }
 
-/* Payment Modal Overlay */
-/* .modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-}
-
-.modal-overlay.active {
-  opacity: 1;
-  visibility: visible;
-} */
-
-/* Payment Card Container */
-/* .payment-card {
-  background: white;
-  border-radius: 12px;
-  width: 90%;
-  max-width: 500px;
-  position: relative;
-  padding: 24px;
-  transform: scale(0.9);
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-
-.modal-overlay.active .payment-card {
-  transform: scale(1);
-  opacity: 1;
-} */
 
 /* Close Button */
 .close-button {
@@ -426,30 +378,6 @@ select:focus {
   background-color: #f3f4f6;
 }
 
-/* Payment Header */
-/* .payment-header {
-  text-align: center;
-  margin-bottom: 24px;
-}
-
-.payment-header h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-.payment-amount {
-  font-size: 32px;
-  font-weight: bold;
-  color: #003049;
-} */
-
-/* Payment Form */
-/* .payment-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-} */
 
 .form-group {
   display: flex;
@@ -499,49 +427,6 @@ select:focus {
 .form-group.half {
   flex: 1;
 }
-
-/* .expiry-input,
-.cvv-input {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #e5e7eb;
-  border-radius: 6px;
-  font-size: 16px;
-} */
-
-/* Pay Now Button */
-/* .pay-now-button {
-  width: 100%;
-  padding: 14px;
-  background-color: #003049;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.pay-now-button:hover {
-  background-color: #F77F00;
-}
-
-.pay-now-button:disabled {
-  background-color: #9ca3af;
-  cursor: not-allowed;
-} */
-
-/* .pay-now-button.processing {
-  background-color: #9ca3af;
-}
-
-.processing-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-} */
 
 /* Success Message */
 .success-message {
@@ -625,14 +510,6 @@ select:focus {
   }
 }
 
-/* Input Focus States */
-/* .card-number-input:focus,
-.expiry-input:focus,
-.cvv-input:focus {
-  outline: none;
-  border-color: #003049;
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
-} */
 
 /* Responsive Design */
 @media (max-width: 480px) {

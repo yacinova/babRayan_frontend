@@ -223,7 +223,7 @@
   }
 
   .m-section {
-    margin-left: 0; /* Remove left margin on smaller screens */
+    margin-left: 0;
   }
 
   .hero-title {
@@ -240,6 +240,6 @@
   }
 
   .m-section {
-    margin-left: 0; /* Remove left margin on smaller screens */
+    margin-left: 0;
   }
 }

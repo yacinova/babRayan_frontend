@@ -1,5 +1,5 @@
 .members_div .member-card {
-    background-color: #f9f9f9; /* Light background for cards */
+    background-color: #f9f9f9; 
     border: none;
     border-radius: 8px;
     transition: box-shadow 0.3s ease;
@@ -7,7 +7,7 @@
   }
   
   .members_div .member-card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   }
   
   .members_div .member-image {

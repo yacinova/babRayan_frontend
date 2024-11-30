@@ -30,24 +30,14 @@
 }
 
 .contact-page .hero-section {
-  /* background-color: #343a40; */
   background-image: url('../../../assets/bg.webp');
   color: white;
   height: 250px;
-  /* padding: 1rem 0.5rem; */
-  /* text-align: center; */
 }
 
 .contact-page .hero-content {
-  /* max-width: 800px; */
   margin: auto;
 }
-
-/* .logo {
-  width: 70px;
-  height: 70px;
-  margin-top: 1rem;
-} */
 
 .contact-page .main-content {
   max-width: 1400px;
@@ -73,7 +63,6 @@
 .contact-page .contact_form label {
   display: block;
   margin-bottom: 0.5rem;
-  /* font-weight: bold; */
 }
 
 .contact_form input,

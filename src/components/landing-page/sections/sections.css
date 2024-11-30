@@ -25,14 +25,12 @@
 @media (min-width: 768px) {
   .stat-item {
     flex: 0 1 45%;
-    /* Two per row on medium screens */
   }
 }
 
 @media (min-width: 1200px) {
   .stat-item {
     flex: 0 1 22%;
-    /* Four per row on large screens */
   }
 }
 

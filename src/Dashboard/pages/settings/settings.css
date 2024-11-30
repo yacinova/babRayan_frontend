@@ -41,7 +41,7 @@
   }
   
   .ant-upload-list {
-    display: none; /* Hides default upload list */
+    display: none;
   }
   
   .form-buttons {

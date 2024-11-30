@@ -1,9 +1,9 @@
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 /* Hero Section */
 .container .hero-section {
   position: relative;
@@ -21,6 +21,7 @@
 .container .title {
   color: #003049;
 }
+
 .container .hero-content {
   position: relative;
   z-index: 2;
@@ -33,45 +34,36 @@
   margin-top: var(--spacing-base);
 }
 
-.protection-enfance{
+.protection-enfance {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* padding: 1rem; */
-  /* margin: 1rem; */
 }
-.protection-enfance img{
+
+.protection-enfance img {
   border-radius: 20px;
   width: 100%;
   height: 500px;
 }
+
 .protection-enfance p {
   font-size: 1.2rem;
   margin-bottom: var(--spacing-base);
-  jastify-content: center;
+  justify-content: center;
 }
 
-.foyer-bab-rayan{
 
-}
 
-.projet-vie{
-
-}
-
- .foyer h3 {
+.foyer h3 {
   font-size: 1.5rem;
   font-weight: 700;
-      margin-left: auto;
-    margin-right: auto;
-    /* width: 6em */
-  /* justify-content: center; */
-  /* color: var(--primary-red); */
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: var(--spacing-base);
 }
 
-.pic-foyer{
+.pic-foyer {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -80,9 +72,9 @@
   margin-bottom: 4rem;
 }
 
-.pic-foyer img{
+.pic-foyer img {
   width: 100%;
-  height:80%;
+  height: 80%;
   max-width: 400px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
